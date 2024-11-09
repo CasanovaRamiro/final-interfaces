@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es" class="html">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    
+</head>
+<body class="registro">
+    <div class="contenedor-registro">
+        <h1 class="titulo-registro">Registrarse</h1>
+        <form class="form-registro" action="login.html" method="post">
+
+            <label for="name" ><span>*</span>Nombre completo</label>
+            <input type="text" name="name" id="name" required>
+        
+            <label for="year"><span>*</span>Fecha de Nacimiento</label>
+            <input type="date" name="date" id="date" required>
+
+            <label for="sex"><span>*</span>Sexo</label>
+            <select class="select-registro" name="sex" id="sex" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+            </select>
+           
+            <label for="mail"><span>*</span>Email</label>
+            <input type="email" name="mail" id="mail" required>
+           
+        
+            <label for="password"><span>*</span>Contraseña</label>
+            <input type="password" name="password" id="password" required>
+           
+            <input type="submit" value="Crear cuenta" class="boton-crear-cuenta">
+        </form>
+    </div>
+</body>
+</html>

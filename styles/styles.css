@@ -1,0 +1,191 @@
+/****************
+/*ESTILOS INDEX*
+****************/
+
+body{
+    color: #003366;
+    background-color: #66cc99;
+    background-image: url('https://saludconlupa.com/media/images/shutterstock_131191718.width-1920.jpg');
+}
+
+.index h1{
+    color: #003366;
+    padding: 20px;
+    margin-top: 200px;
+}
+
+.header-index {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 20px; 
+}
+
+.nav-index {
+    display: flex; 
+    gap: 10px; 
+}
+
+.nav-index button {
+    height: 40px;
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0.37);
+    border-radius: 8px;
+    cursor: pointer;
+    border: solid 1px #003366;
+    color: #003366;
+    font-size: 18px;
+}
+
+.nav-index button:hover{
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.712);
+}
+
+/****************
+/*ESTILOS LOGIN*
+****************/
+
+.login{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+}
+.contenedor-login{
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(255, 255, 255, 0.712);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    
+   
+}
+.titulo-login {
+    font-size: 32px;
+    font-weight: bold;
+    color: #003366;
+    
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-login input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    font-size: 16px;
+    
+}
+
+.form-login .submit-button {
+    background-color: #003366;
+    color: white;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 70%;
+}
+
+
+.form-login .submit-button:hover {
+    background-color: #004e9c;
+}
+
+
+.form-login .login-link:hover {
+    text-decoration: underline;
+    color: #004e9c;
+}
+
+/****************
+/*ESTILOS REGISTRO*
+****************/
+
+.registro{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+}
+.contenedor-registro{
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(255, 255, 255, 0.712);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    
+   
+}
+.titulo-registro {
+    font-size: 32px;
+    font-weight: bold;
+    color: #003366;
+    
+}
+
+.form-registro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-registro input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    font-size: 16px;
+    
+}
+
+.select-registro{
+    width: 106%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    font-size: 16px;
+}
+
+.form-registro .boton-crear-cuenta {
+    background-color: #003366;
+    color: white;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 70%;
+}
+
+
+.form-registro .boton-crear-cuenta:hover {
+    background-color: #004e9c;
+}
+
+.form-registro label {
+    font-size: 16px;
+    color: #666;
+    text-align: left;
+}
