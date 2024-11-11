@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin: 0;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Estilos generales del nav */
+nav {
+    background-color: #003366; /* Color de fondo del nav */
+    padding: 10px 20px; /* Espaciado alrededor del nav */
+    margin: 0;
+    
+}
+
+.nav-ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Estilo de los elementos del menú */
+.nav-li:first-child {
+    margin-right: auto; 
+}
+
+.nav-li:nth-child(2),
+.nav-li:nth-child(3) {
+    margin: 0 20px; 
+}
+
+.nav-li:last-child {
+    margin-left: auto; 
+}
+
+/* Estilo de los enlaces */
+.nav-ul a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 12px;
+}
+
+.nav-ul a:hover {
+    color: #d4d6d5; 
+}
+
+.container{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+}
+.turnos{
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(255, 255, 255, 0.712);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+.turnos-cercanos{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.turnos-cercanos2{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    
+}
+.calendario{
+    grid-column: 2/3;
+    grid-row: 1/3;
+
+}
+
+/****************
+/*Calendario*
+****************/
+.calendar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.month {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.month h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.day, .date, .empty {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #e0e0e0;
+    color: #333;
+    border-radius: 4px;
+}
+
+.date {
+    background-color: #87CEEB;
+}
+
+.day {
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+}
+
+.empty {
+    background-color: transparent;
+}
+
+.navigation {
+    margin-top: 20px;
+}
+
+.navButton {
+    font-size: 1.5em;
+    background-color: #87CEEB;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.navButton:hover {
+    background-color: #5bb4d7;
+}
