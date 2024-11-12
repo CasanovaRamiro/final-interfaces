@@ -100,6 +100,19 @@ function sendMessage() {
     const newMessage = document.createElement("p");
     newMessage.textContent = message;
     chatBody.appendChild(newMessage);
+    // Crear burbuja de mensaje del usuario
+    const userMessage = document.createElement("p");
+    userMessage.classList.add("user-message");
+    userMessage.innerHTML = message;
+    chatBody.appendChild(userMessage);
+
+    // Crear burbuja de respuesta automática
+    const botMessage = document.createElement("p");
+    botMessage.classList.add("bot-message");
+    botMessage.textContent = "Buenos días! En qué podemos ayudarte?";
+    chatBody.appendChild(botMessage);
+
+    // Limpiar campo de entrada y hacer scroll hasta el final del chat
     chatInput.value = "";
     chatBody.scrollTop = chatBody.scrollHeight;
   }

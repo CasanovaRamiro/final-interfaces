@@ -115,7 +115,7 @@ nav ul li {
   grid-template-rows: 1fr 1fr;
   padding: 2em;
   gap: 2em;
-  grid-template-areas: "cercano calendario" "anterior calendario";
+  grid-template-areas: "cercano calendario" "anterior calendario2";
   
 }
 .turnos {
@@ -135,6 +135,9 @@ grid-area: anterior;
 }
 .calendario {
 grid-area: calendario;
+}
+.calendario2 {
+grid-area: calendario2;
 }
 
 /****************
@@ -293,6 +296,20 @@ grid-area: calendario;
     cursor: pointer;
   }
   
+  .user-message {
+    background-color: #d1e7ff;
+    color: #333;
+    align-self: flex-end;
+    border-top-right-radius: 0;
+    border-radius: 3px;
+  }
+  .bot-message {
+    background-color: #f1f1f1;
+    color: #333;
+    align-self: flex-start;
+    border-top-left-radius: 0;
+    border-radius: 3px;
+  }
   /* Cuerpo del chat */
   .chat-body {
     padding: 10px;
