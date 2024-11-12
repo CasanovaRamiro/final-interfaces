@@ -153,6 +153,66 @@ class Components {
                 </ul>
             </footer>`;
     }
+    static chatBox() {
+        return `
+            <div class="chat-container">
+                <div class="chat-header">
+                    Doctor
+                </div>
+                <div class="chat-body">
+                    <div class="chat-logs"></div>
+                </div>
+                <div class="chat-input-container">
+                    <form class="chat-input-form">
+                        <input type="text" class="chat-input" placeholder="Escriba un mensaje..."/>
+                        <button type="submit" class="chat-submit">➤</button>
+                    </form>
+                </div>
+            </div>
+        `;
+    }
+
+    static initChat() {
+        const chatLogs = document.querySelector('.chat-logs');
+        const chatForm = document.querySelector('.chat-input-form');
+        const chatInput = document.querySelector('.chat-input');
+        let messageIndex = 0;
+
+        function generateMessage(msg, type) {
+            messageIndex++;
+            const messageDiv = document.createElement('div');
+            messageDiv.id = `cm-msg-${messageIndex}`;
+            messageDiv.className = `chat-msg ${type}`;
+
+            messageDiv.innerHTML = `
+                <span class="msg-avatar">
+                    <img src="/api/placeholder/40/40">
+                </span>
+                <div class="msg-text">
+                    ${msg}
+                </div>
+            `;
+
+            chatLogs.appendChild(messageDiv);
+            chatLogs.scrollTop = chatLogs.scrollHeight;
+        }
+
+        chatForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const msg = chatInput.value.trim();
+
+            if (msg === '') return;
+
+            // Send user message
+            generateMessage(msg, 'self');
+            chatInput.value = '';
+
+            // Simulate bot response after 1 second
+            setTimeout(() => {
+                generateMessage("Hola! Contame, que te anda pasando!", 'user');
+            }, 1000);
+        });
+    }
 
     static init() {
         // Insert navbar
@@ -165,6 +225,13 @@ class Components {
         const footerPlaceholder = document.querySelector('#footer-placeholder');
         if (footerPlaceholder) {
             footerPlaceholder.innerHTML = this.footer();
+        }
+
+        // Insert chat
+        const chatPlaceholder = document.querySelector('#chat-placeholder');
+        if (chatPlaceholder) {
+            chatPlaceholder.innerHTML = this.chatBox();
+            this.initChat(); // Initialize chat functionality after inserting HTML
         }
     }
 }
