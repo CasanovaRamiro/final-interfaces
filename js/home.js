@@ -78,3 +78,29 @@ document.getElementById("nextMonth").addEventListener("click", () => {
 
 // Llamar a la función para mostrar el mes inicial (Enero)
 generateCalendar(currentMonth);
+
+
+//widget de chat
+const chatWidget = document.getElementById("chatWidget");
+const chatBody = document.getElementById("chatBody");
+const chatInput = document.getElementById("chatInput");
+
+function toggleChat() {
+  chatWidget.classList.toggle("minimized");
+}
+
+function closeChat(event) {
+  event.stopPropagation();
+  chatWidget.classList.add("minimized");
+}
+
+function sendMessage() {
+  const message = chatInput.value.trim();
+  if (message) {
+    const newMessage = document.createElement("p");
+    newMessage.textContent = message;
+    chatBody.appendChild(newMessage);
+    chatInput.value = "";
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+}

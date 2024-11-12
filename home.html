@@ -68,6 +68,21 @@
         </div>
       </article>
     </section>
+  
+    <div class="chat-widget minimized" id="chatWidget">
+        <div class="chat-header" onclick="toggleChat()">
+          <p>Soporte en línea</p>
+          <button class="close-chat" onclick="closeChat(event)">×</button>
+        </div>
+        <div class="chat-body" id="chatBody">
+          <p>Bienvenido al chat de soporte.</p>
+        </div>
+        <div class="chat-footer">
+          <input type="text" id="chatInput" placeholder="Escribe tu mensaje..." />
+          <button class="send-button" onclick="sendMessage()">Enviar</button>
+        </div>
+      </div>
+
     <footer>
       <ul class="company">
         <li><a href="index.html">Inicio</a></li>

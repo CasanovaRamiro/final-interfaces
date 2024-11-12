@@ -210,46 +210,6 @@ grid-area: calendario;
   background-color: #5bb4d7;
 }
 
-footer {
-  background-color: #000000;
-  color: #cecece;
-  padding: 1em;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-  }
-  svg {
-    width: 1em;
-  }
-  a {
-    text-decoration: none;
-    color: #cecece;
-  }
-  li {
-    display: flex;
-    gap: 0.5em;
-    align-items: flex-end;
-  }
-}
-.interno {
-  text-decoration: none;
-  color: #ffffff;
-}
-span {
-  font-weight: bold;
-}
-.copy {
-  margin: 0;
-  padding: 1em;
-  text-align: center;
-  font-size: small;
-  background-color: #000000;
-  color: #cecece;
-}
 
 /* Estilos de las card de turnos*/
 .turno-proximo,.turno-anterior {
@@ -286,3 +246,131 @@ span {
 .texto-turno:nth-of-type(2) {
     font-weight: bold;
 }
+
+/* Estilos del widget de chat */
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+  
+  /* Estado minimizado */
+  .minimized {
+    height: 40px;
+    width: 200px;
+    cursor: pointer;
+  }
+  
+  .chat-header {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .chat-header p {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .close-chat {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  /* Cuerpo del chat */
+  .chat-body {
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    color: #333;
+    font-size: 0.9em;
+  }
+  
+  .chat-footer {
+    display: flex;
+    border-top: 1px solid #ccc;
+  }
+  
+  .chat-footer input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+  }
+  
+  .send-button {
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .send-button:hover {
+    background-color: #00509e;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+
+  /*footer*/
+  footer {
+    background-color: #000000;
+    color: #cecece;
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+    }
+    svg {
+      width: 1em;
+    }
+    a {
+      text-decoration: none;
+      color: #cecece;
+    }
+    li {
+      display: flex;
+      gap: 0.5em;
+      align-items: flex-end;
+    }
+  }
+  .interno {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  span {
+    font-weight: bold;
+  }
+  .copy {
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+    font-size: small;
+    background-color: #000000;
+    color: #cecece;
+  }
+  
