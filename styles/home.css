@@ -130,7 +130,7 @@ nav ul li {
   grid-column: 1/2;
   grid-row: 1/2;
 }
-.turnos-cercanos2 {
+.turnos-anteriores {
   grid-column: 1/2;
   grid-row: 2/3;
 }
