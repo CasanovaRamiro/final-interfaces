@@ -15,7 +15,7 @@ h1 {
 /* Estilos generales del nav */
 nav {
   background-color: #003366; /* Color de fondo del nav */
-  padding: 10px 20px; /* Espaciado alrededor del nav */
+  padding: 10px 20px; 
   margin: 0;
 }
 
@@ -28,6 +28,69 @@ nav {
   padding: 0;
   width: 100%;
 }
+.nav-ul a,#perfil {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 12px;
+  }
+  
+  .nav-ul a:hover {
+    color: #d4d6d5;
+  }
+
+#perfil:hover{
+    color: #d4d6d5;
+}
+
+/*menu desplegable*/
+
+nav ul li {
+    position: relative;
+  }
+  
+  nav ul li .interno {
+    display: block;
+    text-align: right;
+  }
+  
+  nav ul li .interno:hover {
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -200%;
+    min-width: 9rem;
+  }
+  
+  .dropdown-content li {
+    display: block;
+  }
+  
+  .dropdown-content li a {
+    color: #000000;
+    padding: 0.4rem 0rem;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content li a:hover {
+    font-weight: bolder;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  /*fin menu desp*/
+
+  svg {
+    width: 1em;
+    color: #ffffff;
+  }
+
 
 /* Estilo de los elementos del menú */
 .nav-li:first-child {
@@ -44,16 +107,7 @@ nav {
 }
 
 /* Estilo de los enlaces */
-.nav-ul a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: bold;
-  padding: 8px 12px;
-}
 
-.nav-ul a:hover {
-  color: #d4d6d5;
-}
 
 .container {
   display: grid;
