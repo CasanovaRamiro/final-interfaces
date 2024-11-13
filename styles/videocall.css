@@ -93,8 +93,7 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 2px solid transparent;
-    background: #f9f9f9;
+    background: #003366;
     color: white;
     cursor: pointer;
     display: flex;
@@ -104,26 +103,24 @@
 }
 
 .control-btn:hover {
-    background: #f9f9f9;
+    background: #003366;
     transform: scale(1.1);
 }
 
 .control-btn.off {
     background: #003366;
-    border: 2px solid #f9f9f9;
 }
 
 .control-btn.active {
-    background: #f9f9f9;
-    border: 2px solid #f9f9f9;
+    background: #003366;
 }
 
 .hangup-btn {
-    background: #ff0000 !important;
+    background: #c62c2c !important;
 }
 
 .hangup-btn:hover {
-    background: #c62c2c !important;
+    background: #ff0000 !important;
 }
 
 .camera-off img {

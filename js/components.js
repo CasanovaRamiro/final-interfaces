@@ -168,16 +168,16 @@ class Components {
                     </div>
                     <div class="video-controls">
                         <button class="control-btn mic-btn">
-                            <i class="mic-icon">🎤</i>
+                            <i class="mic-icon"><span class="material-symbols-outlined mic-icon"> mic </span></i>
                         </button>
                         <button class="control-btn camera-btn">
-                            <i class="camera-icon">📹</i>
+                            <i class="camera-icon"><span class="material-symbols-outlined videocam"> videocam </span></i>
                         </button>
                         <button class="control-btn screen-btn">
-                            <i class="screen-icon">🖥️</i>
+                            <i class="screen-icon"><span class="material-symbols-outlined"> screen_share </span></i>
                         </button>
                         <button class="control-btn hangup-btn">
-                            <i class="phone-icon">📞</i>
+                            <i class="phone-icon"><span class="material-symbols-outlined"> call_end </span></i>
                         </button>
                     </div>
                 </div>
@@ -209,14 +209,15 @@ class Components {
         micBtn.addEventListener('click', () => {
             isMicOn = !isMicOn;
             micBtn.classList.toggle('off');
-            micBtn.querySelector('.mic-icon').textContent = isMicOn ? '🎤' : '🚫';
+            micBtn.querySelector('.mic-icon').innerHTML = isMicOn ? `<span class="material-symbols-outlined mic-icon">mic</span>`
+                : `<span class="material-symbols-outlined mic-icon ">mic_off</span>`;
         });
 
         // Camera toggle
         cameraBtn.addEventListener('click', () => {
             isCameraOn = !isCameraOn;
             cameraBtn.classList.toggle('off');
-            cameraBtn.querySelector('.camera-icon').textContent = isCameraOn ? '📹' : '🚫';
+            cameraBtn.querySelector('.camera-icon').innerHTML = isCameraOn ? `<span class="material-symbols-outlined"> videocam </span>` : `<span class="material-symbols-outlined"> videocam_off </span>`;
             placeholderVideo.classList.toggle('camera-off');
         });
 
@@ -224,7 +225,7 @@ class Components {
         screenBtn.addEventListener('click', () => {
             isScreenSharing = !isScreenSharing;
             screenBtn.classList.toggle('active');
-            screenBtn.querySelector('.screen-icon').textContent = isScreenSharing ? '⏹️' : '🖥️';
+            screenBtn.querySelector('.screen-icon').innerHTML = isScreenSharing ? `<span class="material-symbols-outlined"> stop_screen_share </span>` : `<span class="material-symbols-outlined"> screen_share </span>`;
 
             if (isScreenSharing) {
                 placeholderVideo.innerHTML = `
@@ -271,7 +272,7 @@ class Components {
                 <div class="chat-input-container">
                     <form class="chat-input-form">
                         <input type="text" class="chat-input" placeholder="Escriba un mensaje..."/>
-                        <button type="submit" class="chat-submit">➤</button>
+                        <button type="submit" class="chat-submit"><span class="material-symbols-outlined"> send </span></button>
                     </form>
                 </div>
             </div>
