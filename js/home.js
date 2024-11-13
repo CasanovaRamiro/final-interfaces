@@ -183,7 +183,7 @@ const medicos = [
     id: 4,
     nombre: "Ezequiel Álvarez",
     especialidad: "Clínica médica",
-    foto: "/img/medico 4.jfif",
+    foto: "/img/medico 4.jpg",
     disponibilidad: {
       Lunes: ["13:00", "14:00", "17:00", "15:00"],
       Martes: ["08:00", "09:00", "10:00", "11:00", "15:00"],
