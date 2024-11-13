@@ -43,12 +43,13 @@
       
       <article class="turnos turnos-anteriores">
         <h3>Turnos anteriores</h3>
+               
         <div class="turno-anterior">
-          <img src="img/medico 3.jfif" alt="Leandro Delrio" />
+          <img src="img/medico 5.jpg" alt="Edgardo López" />
           <div class="texto-container">
-            <p class="texto-turno">Lunes 06 de Mayo de 2024 18:40 hs</p>
-            <p class="texto-turno">Leandro Delrio</p>
-            <p class="texto-turno">Cardiología</p>
+            <p class="texto-turno">Martes 05 de Noviembre de 2024 11:00 hs</p>
+            <p class="texto-turno">Gonzalo Gimenez</p>
+            <p class="texto-turno">Traumatología</p>
           </div>
         </div>
         <div class="turno-anterior">
@@ -57,6 +58,14 @@
             <p class="texto-turno">Lunes 10 de Junio de 2024 15:00 hs</p>
             <p class="texto-turno">Gonzalo Gimenez</p>
             <p class="texto-turno">Endrcrinología</p>
+          </div>
+        </div>
+        <div class="turno-anterior">
+          <img src="img/medico 3.jfif" alt="Leandro Delrio" />
+          <div class="texto-container">
+            <p class="texto-turno">Lunes 06 de Mayo de 2024 18:40 hs</p>
+            <p class="texto-turno">Leandro Delrio</p>
+            <p class="texto-turno">Cardiología</p>
           </div>
         </div>
       </article>
@@ -73,15 +82,15 @@
     </section>
     <section>
     <article class="horarios-medicos" >
-      <h3>Disponibilidad de mis médicos</h3>
+      <h3 id="medicos">Disponibilidad de mis médicos</h3>
       <div id="medico-container">
-      <button id="prev" class="navButton" onclick="cambiarMedico(-1)">←</button>
+      <button id="prev" class="navButton btn-medico" onclick="cambiarMedico(-1)">←</button>
       <div id="medico-info">
         <img id="foto-medico" src="" alt="Foto del Médico" />
         <h3 id="nombre-medico"></h3>
         <p id="especialidad-medico"></p>
       </div>
-      <button id="next" class="navButton" onclick="cambiarMedico(1)">→</button>
+      <button id="next" class="navButton btn-medico" onclick="cambiarMedico(1)">→</button>
     </div>
     <div id="horarios-container"></div>
     </article>
