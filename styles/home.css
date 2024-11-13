@@ -109,32 +109,19 @@ svg {
 /* Estilo de los turnos */
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
   padding: 2em;
   gap: 2em;
-  grid-template-areas: "cercano calendario" "anterior horario";
+justify-content: space-around;
+align-content: center;
 }
 .turnos {
   font-family: "Arial", sans-serif;
   background-color: rgba(255, 255, 255, 0.712);
-  padding: 40px;
+  padding: 10px 40px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-}
-.turnos-cercanos {
-  grid-area: cercano;
-}
-.turnos-anteriores {
-  grid-area: anterior;
-}
-.calendario {
-  grid-area: calendario;
-}
-.horarios-medicos {
-  grid-area: horario;
 }
 
 /****************
@@ -200,7 +187,6 @@ svg {
   background-color: rgb(135, 206, 235, 50%);
   border: none;
   color: white;
-  padding: 5px 10px;
   cursor: pointer;
   border-radius: 5px;
   margin: 5px;
@@ -240,6 +226,7 @@ svg {
 .texto-turno {
   margin: 5px 0;
   color: #333;
+  font-size: small;
 }
 
 .modificar {
@@ -362,6 +349,10 @@ svg {
   align-items: center;
   justify-content: center;
   margin: 20px;
+  background-color:;
+}
+h3{
+  background-color:;
 }
 
 #foto-medico {
@@ -373,10 +364,10 @@ svg {
 
 #horarios-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 10px;
-  margin-top: 20px;
-  
+  margin-top: 10px;
+  padding: 2rem;
 }
 
 .dia {

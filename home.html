@@ -39,6 +39,8 @@
           </div>
         </div>
       </article>
+      
+      
       <article class="turnos turnos-anteriores">
         <h3>Turnos anteriores</h3>
         <div class="turno-anterior">
@@ -58,6 +60,7 @@
           </div>
         </div>
       </article>
+
       <article class="calendario">
         <div id="calendar" class="calendar"></div>
         <div class="navigation">
@@ -65,21 +68,24 @@
           <button id="nextMonth" class="navButton">→</button>
         </div>
       </article>
-      <article class="horarios-medicos" >
-        <h3>Disponibilidad de mis médicos</h3>
-        <div id="medico-container">
-        <button id="prev" class="navButton" onclick="cambiarMedico(-1)">←</button>
-        <div id="medico-info">
-          <img id="foto-medico" src="" alt="Foto del Médico" />
-          <h3 id="nombre-medico"></h3>
-          <p id="especialidad-medico"></p>
-        </div>
-        <button id="next" class="navButton" onclick="cambiarMedico(1)">→</button>
-      </div>
-      <div id="horarios-container"></div>
-      </article>
-    </section>
 
+      
+    </section>
+    <section>
+    <article class="horarios-medicos" >
+      <h3>Disponibilidad de mis médicos</h3>
+      <div id="medico-container">
+      <button id="prev" class="navButton" onclick="cambiarMedico(-1)">←</button>
+      <div id="medico-info">
+        <img id="foto-medico" src="" alt="Foto del Médico" />
+        <h3 id="nombre-medico"></h3>
+        <p id="especialidad-medico"></p>
+      </div>
+      <button id="next" class="navButton" onclick="cambiarMedico(1)">→</button>
+    </div>
+    <div id="horarios-container"></div>
+    </article>
+  </section>
     <div class="chat-widget minimized" id="chatWidget">
       <div class="chat-header" onclick="toggleChat()">
         <p>Soporte en línea</p>
