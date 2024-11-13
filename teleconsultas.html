@@ -4,14 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/chat.css" />
+    <link rel="stylesheet" href="styles/videocall.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <title>Document</title>
+    <style>
+      #view {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      #chat {
+        width: 350px;
+      }
+    </style>
   </head>
   <body>
     <div id="navbar-placeholder"></div>
-    <!--Aca ponemos el contenido-->
+    <div id="view">
+      <div id="videocall-placeholder"></div>
+      <div id="chat"><div id="chat-placeholder"></div></div>
+    </div>
     <div id="footer-placeholder"></div>
 
     <script src="js/components.js"></script>
     <script src="js/home.js"></script>
   </body>
+
 </html>

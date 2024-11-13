@@ -154,6 +154,173 @@ class Components {
             </footer>`;
     }
 
+    static videoCall() {
+        return `
+            <div class="video-container">
+                <div class="join-screen active">
+                    <button class="join-btn">Join Video Call</button>
+                </div>
+                <div class="call-screen">
+                    <div class="video-area">
+                        <div class="placeholder-video">
+                            <img src="../img/doctor.jpg" alt="User camera placeholder" class="user-camera-img">
+                        </div>
+                    </div>
+                    <div class="video-controls">
+                        <button class="control-btn mic-btn">
+                            <i class="mic-icon"><span class="material-symbols-outlined mic-icon"> mic </span></i>
+                        </button>
+                        <button class="control-btn camera-btn">
+                            <i class="camera-icon"><span class="material-symbols-outlined videocam"> videocam </span></i>
+                        </button>
+                        <button class="control-btn screen-btn">
+                            <i class="screen-icon"><span class="material-symbols-outlined"> screen_share </span></i>
+                        </button>
+                        <button class="control-btn hangup-btn">
+                            <i class="phone-icon"><span class="material-symbols-outlined"> call_end </span></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    static initVideoCall() {
+        const joinBtn = document.querySelector('.join-btn');
+        const joinScreen = document.querySelector('.join-screen');
+        const callScreen = document.querySelector('.call-screen');
+        const micBtn = document.querySelector('.mic-btn');
+        const cameraBtn = document.querySelector('.camera-btn');
+        const screenBtn = document.querySelector('.screen-btn');
+        const hangupBtn = document.querySelector('.hangup-btn');
+        const placeholderVideo = document.querySelector('.placeholder-video');
+
+        let isMicOn = true;
+        let isCameraOn = true;
+        let isScreenSharing = false;
+
+        // Join call handler
+        joinBtn.addEventListener('click', () => {
+            joinScreen.classList.remove('active');
+            callScreen.classList.add('active');
+        });
+
+        // Mic toggle
+        micBtn.addEventListener('click', () => {
+            isMicOn = !isMicOn;
+            micBtn.classList.toggle('off');
+            micBtn.querySelector('.mic-icon').innerHTML = isMicOn ? `<span class="material-symbols-outlined mic-icon">mic</span>`
+                : `<span class="material-symbols-outlined mic-icon ">mic_off</span>`;
+        });
+
+        // Camera toggle
+        cameraBtn.addEventListener('click', () => {
+            isCameraOn = !isCameraOn;
+            cameraBtn.classList.toggle('off');
+            cameraBtn.querySelector('.camera-icon').innerHTML = isCameraOn ? `<span class="material-symbols-outlined"> videocam </span>` : `<span class="material-symbols-outlined"> videocam_off </span>`;
+            placeholderVideo.classList.toggle('camera-off');
+        });
+
+        // Screen share toggle
+        screenBtn.addEventListener('click', () => {
+            isScreenSharing = !isScreenSharing;
+            screenBtn.classList.toggle('active');
+            screenBtn.querySelector('.screen-icon').innerHTML = isScreenSharing ? `<span class="material-symbols-outlined"> stop_screen_share </span>` : `<span class="material-symbols-outlined"> screen_share </span>`;
+
+            if (isScreenSharing) {
+                placeholderVideo.innerHTML = `
+                    <img src="../img/doctor.jpg" alt="Screen share placeholder" class="screen-share-img">
+                `;
+            } else {
+                placeholderVideo.innerHTML = `
+                    <img src="../img/doctor.jpg" alt="User camera placeholder" class="user-camera-img">
+                `;
+            }
+        });
+
+        // Hang up handler
+        hangupBtn.addEventListener('click', () => {
+            joinScreen.classList.add('active');
+            callScreen.classList.remove('active');
+
+            // Reset all states
+            isMicOn = true;
+            isCameraOn = true;
+            isScreenSharing = false;
+
+            // Reset buttons
+            micBtn.classList.remove('off');
+            cameraBtn.classList.remove('off');
+            screenBtn.classList.remove('active');
+
+            // Reset icons
+            micBtn.querySelector('.mic-icon').textContent = '🎤';
+            cameraBtn.querySelector('.camera-icon').textContent = '📹';
+            screenBtn.querySelector('.screen-icon').textContent = '🖥️';
+        });
+    }
+
+    static chatBox() {
+        return `
+            <div class="chat-container">
+                <div class="chat-header">
+                    Doctor
+                </div>
+                <div class="chat-body">
+                    <div class="chat-logs"></div>
+                </div>
+                <div class="chat-input-container">
+                    <form class="chat-input-form">
+                        <input type="text" class="chat-input" placeholder="Escriba un mensaje..."/>
+                        <button type="submit" class="chat-submit"><span class="material-symbols-outlined"> send </span></button>
+                    </form>
+                </div>
+            </div>
+        `;
+    }
+
+    static initChat() {
+        const chatLogs = document.querySelector('.chat-logs');
+        const chatForm = document.querySelector('.chat-input-form');
+        const chatInput = document.querySelector('.chat-input');
+        let messageIndex = 0;
+
+        function generateMessage(msg, type) {
+            messageIndex++;
+            const messageDiv = document.createElement('div');
+            messageDiv.id = `cm-msg-${messageIndex}`;
+            messageDiv.className = `chat-msg ${type}`;
+
+            messageDiv.innerHTML = `
+                <span class="msg-avatar">
+                    <img src="/api/placeholder/40/40">
+                </span>
+                <div class="msg-text">
+                    ${msg}
+                </div>
+            `;
+
+            chatLogs.appendChild(messageDiv);
+            chatLogs.scrollTop = chatLogs.scrollHeight;
+        }
+
+        chatForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const msg = chatInput.value.trim();
+
+            if (msg === '') return;
+
+            // Send user message
+            generateMessage(msg, 'self');
+            chatInput.value = '';
+
+            // Simulate bot response after 1 second
+            setTimeout(() => {
+                generateMessage("Hola! Contame, que te anda pasando!", 'user');
+            }, 1000);
+        });
+    }
+
     static init() {
         // Insert navbar
         const navbarPlaceholder = document.querySelector('#navbar-placeholder');
@@ -165,6 +332,20 @@ class Components {
         const footerPlaceholder = document.querySelector('#footer-placeholder');
         if (footerPlaceholder) {
             footerPlaceholder.innerHTML = this.footer();
+        }
+
+        // Insert chat
+        const chatPlaceholder = document.querySelector('#chat-placeholder');
+        if (chatPlaceholder) {
+            chatPlaceholder.innerHTML = this.chatBox();
+            this.initChat(); // Initialize chat functionality after inserting HTML
+        }
+
+        // Insert video call
+        const videoCallPlaceholder = document.querySelector('#videocall-placeholder');
+        if (videoCallPlaceholder) {
+            videoCallPlaceholder.innerHTML = this.videoCall();
+            this.initVideoCall();
         }
     }
 }
