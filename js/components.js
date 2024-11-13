@@ -158,7 +158,7 @@ class Components {
         return `
             <div class="video-container">
                 <div class="join-screen active">
-                    <button class="join-btn">Join Video Call</button>
+                    <button class="join-btn">Comenzar Video llamada</button>
                 </div>
                 <div class="call-screen">
                     <div class="video-area">
