@@ -1,17 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/home.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div id="navbar-placeholder"></div>
-    <!--Aca ponemos el contenido-->
-    <div id="footer-placeholder"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/home.css" />
+  <link rel="stylesheet" href="styles/perfil.css" />
+  <title>Perfil de Usuario</title>
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<section class="container">
+  <article class="perfil">
+    <h3>Fulanito Cosme</h3>
+    <div class="perfil-info">
+      <div class="image-container">
+        <img src="img/default-user.png" alt="Foto de perfil" class="profile-image"/>
+        <button class="edit-image-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 20h9"></path>
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+          </svg>
+        </button>
+      </div>
 
-    <script src="js/components.js"></script>
-    <script src="js/home.js"></script>
-  </body>
+      <form class="datos-superiores">
+        <input type="text" value="Fulanito Cosme" placeholder="Nombre y Apellido" class="form-input" readonly>
+        <input type="email" value="CosmeFulanitoOk@gmail.com" placeholder="Email" class="form-input" >
+        <input type="tel" value="123456789" placeholder="Teléfono" class="form-input" >
+        <input type="text" value="12345678" placeholder="DNI" class="form-input" >
+      </form>
+    </div>
+
+    <div class="datos-inferiores">
+      <form class="datos-columna">
+        <input type="date" value="1998-01-01" placeholder="Fecha de Nacimiento" class="form-input" >
+        <input type="text" value="Av. Siempre Viva 123" placeholder="Dirección" class="form-input" >
+        <input type="text" value="Springfield" placeholder="Localidad" class="form-input" >
+      </form>
+      <form class="datos-columna">
+        <input type="text" value="Springfield" placeholder="Provincia" class="form-input" >
+        <input type="text" value="Argentina" placeholder="País" class="form-input" >
+        <select class="form-input">
+          <option value="argentina">Obra Social</option>
+          <option value="osde" selected>OSDE</option>
+          <option value="swiss">Swiss Medical</option>
+        </select>
+      </form>
+    </div>
+
+    <div class="historial-buttons">
+      <button class="historial-btn">Historial de Turnos</button>
+      <button class="historial-btn">Historial de Teleconsultas</button>
+    </div>
+  </article>
+</section>
+<div id="footer-placeholder"></div>
+
+<script src="js/components.js"></script>
+<script src="js/home.js"></script>
+</body>
 </html>
