@@ -1,0 +1,167 @@
+/* Video Call Styles */
+.video-container {
+    width: 800px;
+    height: 600px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 5px 35px 9px rgba(0, 0, 0, 0.2);
+}
+
+.join-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.join-screen.active {
+    display: flex;
+}
+
+.join-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: rgba(0, 51, 102, 0.57);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.join-btn:hover {
+    background: #003366;
+    transform: scale(1.05);
+}
+
+.call-screen {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: relative;
+}
+
+.call-screen.active {
+    display: block;
+}
+
+.video-area {
+    width: 100%;
+    height: calc(100% - 80px); /* Fixed height minus controls height */
+    position: relative;
+}
+
+.placeholder-video {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.user-camera-img,
+.screen-share-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.video-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #003366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.control-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: #f9f9f9;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+    background: #f9f9f9;
+    transform: scale(1.1);
+}
+
+.control-btn.off {
+    background: #003366;
+    border: 2px solid #f9f9f9;
+}
+
+.control-btn.active {
+    background: #f9f9f9;
+    border: 2px solid #f9f9f9;
+}
+
+.hangup-btn {
+    background: #ff0000 !important;
+}
+
+.hangup-btn:hover {
+    background: #c62c2c !important;
+}
+
+.camera-off img {
+    display: none;
+}
+
+.camera-off::after {
+    content: 'Camera Off';
+    color: #666;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Make the interface responsive */
+@media (max-width: 850px) {
+    .video-container {
+        width: 100%;
+        height: 400px;
+    }
+
+    .video-controls {
+        height: 60px;
+    }
+
+    .video-area {
+        height: calc(100% - 60px); /* Adjust for smaller controls */
+    }
+
+    .control-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .join-btn {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+}
