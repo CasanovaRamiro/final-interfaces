@@ -112,9 +112,18 @@ svg {
   margin-left: auto;
 }
 
+/*Portada*/
 .portada{
   height: 80vh;
   overflow: hidden;
+
+  }
+
+  .texto-portada{
+    color: #003366;
+position: absolute;
+top: 32rem;
+left: 24%;
   }
 
 /* Estilo de los turnos */
