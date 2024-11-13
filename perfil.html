@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles/home.css" />
-    <link rel="stylesheet" href="styles/perfil.css" />
+  <link rel="stylesheet" href="styles/perfil.css" />
   <title>Perfil de Usuario</title>
 </head>
 <body>
 <div id="navbar-placeholder"></div>
 <section class="container">
   <article class="perfil">
-    <h3>Perfil</h3>
+    <h3>Fulanito Cosme</h3>
     <div class="perfil-info">
       <div class="image-container">
         <img src="img/default-user.png" alt="Foto de perfil" class="profile-image"/>
@@ -22,45 +22,32 @@
           </svg>
         </button>
       </div>
-      <div class="datos-container">
-        <div class="campo-perfil">
-          <p class="texto-perfil">Nombre: Fulanito Cosme</p>
-          <button class="edit-btn">Editar</button>
-        </div>
-        <div class="campo-perfil">
-          <p class="texto-perfil">Mail: CosmeFulanitoOk@gmail.com</p>
-          <button class="edit-btn">Editar</button>
-        </div>
-        <div class="campo-perfil">
-          <p class="texto-perfil">Teléfono: 123456789</p>
-          <button class="edit-btn">Editar</button>
-        </div>
-        <div class="campo-perfil">
-          <p class="texto-perfil">DNI: 12345678</p>
-          <button class="edit-btn">Editar</button>
-        </div>
-        <div class="campo-perfil">
-          <p class="texto-perfil">Fecha de nacimiento: 01/01/1998</p>
-          <button class="edit-btn">Editar</button>
-        </div>
-        <div class="campo-perfil">
-          <p class="texto-perfil">Dirección: Av. Siempre Viva 123</p>
-          <button class="edit-btn">Editar</button>
-        </div>
-        <div class="campo-perfil">
-          <p class="texto-perfil">Localidad: Springfield</p>
-          <button class="edit-btn">Editar</button>
-        </div>
-        <div class="campo-perfil">
-          <p class="texto-perfil">Provincia: Springfield</p>
-          <button class="edit-btn">Editar</button>
-        </div>
-        <div class="campo-perfil">
-          <p class="texto-perfil">País: Argentina</p>
-          <button class="edit-btn">Editar</button>
-        </div>
-      </div>
+
+      <form class="datos-superiores">
+        <input type="text" value="Fulanito Cosme" placeholder="Nombre y Apellido" class="form-input" readonly>
+        <input type="email" value="CosmeFulanitoOk@gmail.com" placeholder="Email" class="form-input" >
+        <input type="tel" value="123456789" placeholder="Teléfono" class="form-input" >
+        <input type="text" value="12345678" placeholder="DNI" class="form-input" >
+      </form>
     </div>
+
+    <div class="datos-inferiores">
+      <form class="datos-columna">
+        <input type="date" value="1998-01-01" placeholder="Fecha de Nacimiento" class="form-input" >
+        <input type="text" value="Av. Siempre Viva 123" placeholder="Dirección" class="form-input" >
+        <input type="text" value="Springfield" placeholder="Localidad" class="form-input" >
+      </form>
+      <form class="datos-columna">
+        <input type="text" value="Springfield" placeholder="Provincia" class="form-input" >
+        <input type="text" value="Argentina" placeholder="País" class="form-input" >
+        <select class="form-input">
+          <option value="argentina">Obra Social</option>
+          <option value="osde" selected>OSDE</option>
+          <option value="swiss">Swiss Medical</option>
+        </select>
+      </form>
+    </div>
+
     <div class="historial-buttons">
       <button class="historial-btn">Historial de Turnos</button>
       <button class="historial-btn">Historial de Teleconsultas</button>
