@@ -283,7 +283,7 @@ class Components {
         const chatLogs = document.querySelector('.chat-logs');
         const chatForm = document.querySelector('.chat-input-form');
         const chatInput = document.querySelector('.chat-input');
-        let messageIndex = 0;
+        let messageIndex = 2;
 
         function generateMessage(msg, type) {
             messageIndex++;
@@ -291,9 +291,16 @@ class Components {
             messageDiv.id = `cm-msg-${messageIndex}`;
             messageDiv.className = `chat-msg ${type}`;
 
-            messageDiv.innerHTML = `
+            messageDiv.innerHTML = messageIndex % 2 === 0 ? `
                 <span class="msg-avatar">
-                    <img src="/api/placeholder/40/40">
+                    <img src="../img/doctor-profile.png" alt="User camera placeholder">
+                </span>
+                <div class="msg-text">
+                    ${msg}
+                </div>
+            ` : `
+                <span class="msg-avatar">
+                    <img src="../img/default-user.png" alt="User camera placeholder">
                 </span>
                 <div class="msg-text">
                     ${msg}
