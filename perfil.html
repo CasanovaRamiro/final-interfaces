@@ -1,17 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/home.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div id="navbar-placeholder"></div>
-    <!--Aca ponemos el contenido-->
-    <div id="footer-placeholder"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/perfil.css" />
+  <title>Perfil de Usuario</title>
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<section class="container">
+  <article class="perfil">
+    <h3>Perfil</h3>
+    <div class="perfil-info">
+      <div class="image-container">
+        <img src="img/default-user.png" alt="Foto de perfil" class="profile-image"/>
+        <button class="edit-image-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 20h9"></path>
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="datos-container">
+        <div class="campo-perfil">
+          <p class="texto-perfil">Nombre: Fulanito Cosme</p>
+          <button class="edit-btn">Editar</button>
+        </div>
+        <div class="campo-perfil">
+          <p class="texto-perfil">Mail: CosmeFulanitoOk@gmail.com</p>
+          <button class="edit-btn">Editar</button>
+        </div>
+        <div class="campo-perfil">
+          <p class="texto-perfil">Teléfono: 123456789</p>
+          <button class="edit-btn">Editar</button>
+        </div>
+        <div class="campo-perfil">
+          <p class="texto-perfil">DNI: 12345678</p>
+          <button class="edit-btn">Editar</button>
+        </div>
+        <div class="campo-perfil">
+          <p class="texto-perfil">Fecha de nacimiento: 01/01/1998</p>
+          <button class="edit-btn">Editar</button>
+        </div>
+        <div class="campo-perfil">
+          <p class="texto-perfil">Dirección: Av. Siempre Viva 123</p>
+          <button class="edit-btn">Editar</button>
+        </div>
+        <div class="campo-perfil">
+          <p class="texto-perfil">Localidad: Springfield</p>
+          <button class="edit-btn">Editar</button>
+        </div>
+        <div class="campo-perfil">
+          <p class="texto-perfil">Provincia: Springfield</p>
+          <button class="edit-btn">Editar</button>
+        </div>
+        <div class="campo-perfil">
+          <p class="texto-perfil">País: Argentina</p>
+          <button class="edit-btn">Editar</button>
+        </div>
+      </div>
+    </div>
+    <div class="historial-buttons">
+      <button class="historial-btn">Historial de Turnos</button>
+      <button class="historial-btn">Historial de Teleconsultas</button>
+    </div>
+  </article>
+</section>
+<div id="footer-placeholder"></div>
 
-    <script src="js/components.js"></script>
-    <script src="js/home.js"></script>
-  </body>
+<script src="js/components.js"></script>
+<script src="js/home.js"></script>
+</body>
 </html>

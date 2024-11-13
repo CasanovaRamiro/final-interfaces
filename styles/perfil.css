@@ -1,0 +1,108 @@
+.perfil {
+    background-color: rgba(255, 255, 255, 0.712);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-info {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.image-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.edit-image-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-image-btn:hover {
+    background-color: #014f9c;
+}
+
+.datos-container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.campo-perfil {
+    position: relative;
+    padding: 0.5rem;
+    background-color: rgb(135, 206, 235, 50%);
+    border-radius: 8px;
+}
+
+.campo-perfil:hover .edit-btn {
+    opacity: 1;
+}
+
+.edit-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.edit-btn:hover {
+    background-color: #014f9c;
+}
+
+.texto-perfil {
+    margin: 0;
+    color: #333;
+}
+
+.historial-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.historial-btn {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.historial-btn:hover {
+    background-color: #014f9c;
+}
