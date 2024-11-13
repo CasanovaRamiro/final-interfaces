@@ -92,6 +92,7 @@ nav ul li .interno:hover {
 }
 /*fin menu desp*/
 
+
 svg {
   width: 1em;
   color: #ffffff;
@@ -111,11 +112,16 @@ svg {
   margin-left: auto;
 }
 
+.portada{
+  height: 80vh;
+  overflow: hidden;
+  }
+
 /* Estilo de los turnos */
 
 .container {
   display: flex;
-  padding: 5em 2em 1em 2em;
+  padding: 2em 2em 1em 2em;
   gap: 2em;
 justify-content: space-around;
 align-content: center;
