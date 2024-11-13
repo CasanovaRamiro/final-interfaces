@@ -13,38 +13,50 @@
       <article class="turnos turnos-cercanos">
         <h3>Turnos cercanos</h3>
         <div class="turno-proximo">
-            <img src="img/medico 1.jfif" alt="Soledad Ramirez">
-            <div class="texto-container">
-                <p class="texto-turno">Viernes 29 de Noviembre de 2024 16:40 hs</p>
-                <p class="texto-turno">Soledad Ramirez</p>
-                <p class="texto-turno">CLINICA MÉDICA</p>
+          <img src="img/medico 1.jfif" alt="Soledad Ramirez" />
+          <div class="texto-container">
+            <p class="texto-turno">Viernes 29 de Noviembre de 2024 16:40 hs</p>
+            <p class="texto-turno">Soledad Ramirez</p>
+            <p class="texto-turno">CLINICA MÉDICA</p>
+            <div class="modificaciones-container">
+              <p class="texto-turno modificar">Modificar turno</p>
+              <p class="texto-turno modificar eliminar-turno">Eliminar turno</p>
             </div>
+          </div>
         </div>
         <div class="turno-proximo">
-            <img src="img/medico 2.jfif" alt="Roberto Sánchez">
-            <div class="texto-container">
-                <p class="texto-turno">Miércoles 04 de Diciembre de 2024 10:00 hs</p>
-                <p class="texto-turno">Roberto Sánchez</p>
-                <p class="texto-turno">Dermatología</p>
+          <img src="img/medico 2.jfif" alt="Roberto Sánchez" />
+          <div class="texto-container">
+            <p class="texto-turno">
+              Miércoles 04 de Diciembre de 2024 10:00 hs
+            </p>
+            <p class="texto-turno">Roberto Sánchez</p>
+            <p class="texto-turno">Dermatología</p>
+            <div class="modificaciones-container">
+              <p class="texto-turno modificar">Modificar turno</p>
+              <p class="texto-turno modificar eliminar-turno">Eliminar turno</p>
             </div>
+          </div>
         </div>
       </article>
       <article class="turnos turnos-anteriores">
         <h3>Turnos anteriores</h3>
         <div class="turno-anterior">
-            <img src="img/medico 3.jfif" alt="Leandro Delrio">
-            <div class="texto-container">
-                <p class="texto-turno">Lunes 06 de Mayo de 2024 18:40 hs</p>
-                <p class="texto-turno">Leandro Delrio</p>
-                <p class="texto-turno">Cardiología</p></div>
-            </div>
+          <img src="img/medico 3.jfif" alt="Leandro Delrio" />
+          <div class="texto-container">
+            <p class="texto-turno">Lunes 06 de Mayo de 2024 18:40 hs</p>
+            <p class="texto-turno">Leandro Delrio</p>
+            <p class="texto-turno">Cardiología</p>
+          </div>
+        </div>
         <div class="turno-anterior">
-            <img src="img/medico 7.jfif" alt="Gonzalo Gimenez">
-            <div class="texto-container">
-                <p class="texto-turno">Lunes 10 de Junio de 2024 15:00 hs</p>
-                <p class="texto-turno">Gonzalo Gimenez</p>
-                <p class="texto-turno">Endrcrinología</p></div>
-            </div>
+          <img src="img/medico 7.jfif" alt="Gonzalo Gimenez" />
+          <div class="texto-container">
+            <p class="texto-turno">Lunes 10 de Junio de 2024 15:00 hs</p>
+            <p class="texto-turno">Gonzalo Gimenez</p>
+            <p class="texto-turno">Endrcrinología</p>
+          </div>
+        </div>
       </article>
       <article class="calendario">
         <div id="calendar" class="calendar"></div>
@@ -53,32 +65,36 @@
           <button id="nextMonth" class="navButton">→</button>
         </div>
       </article>
-    </section>
-    <article class="calendario2">
+      <article class="horarios-medicos" >
         <h3>Disponibilidad de mis médicos</h3>
-        <div id="calendar2" class="calendar"></div>
-        <div class="navigation">
-          <button id="prevMonth2" class="navButton">←</button>
-          <button id="nextMonth2" class="navButton">→</button>
+        <div id="medico-container">
+        <button id="prev" class="navButton" onclick="cambiarMedico(-1)">←</button>
+        <div id="medico-info">
+          <img id="foto-medico" src="" alt="Foto del Médico" />
+          <h3 id="nombre-medico"></h3>
+          <p id="especialidad-medico"></p>
         </div>
+        <button id="next" class="navButton" onclick="cambiarMedico(1)">→</button>
+      </div>
+      <div id="horarios-container"></div>
       </article>
     </section>
-  
-    <div class="chat-widget minimized" id="chatWidget">
-        <div class="chat-header" onclick="toggleChat()">
-          <p>Soporte en línea</p>
-          <button class="close-chat" onclick="closeChat(event)">×</button>
-        </div>
-        <div class="chat-body" id="chatBody">
-          <p>Bienvenido al chat de soporte.</p>
-        </div>
-        <div class="chat-footer">
-          <input type="text" id="chatInput" placeholder="Escribe tu mensaje..." />
-          <button class="send-button" onclick="sendMessage()">Enviar</button>
-        </div>
-      </div>
 
-      <div id="footer-placeholder"></div>
+    <div class="chat-widget minimized" id="chatWidget">
+      <div class="chat-header" onclick="toggleChat()">
+        <p>Soporte en línea</p>
+        <button class="close-chat" onclick="closeChat(event)">×</button>
+      </div>
+      <div class="chat-body" id="chatBody">
+        <p>Bienvenido al chat de soporte.</p>
+      </div>
+      <div class="chat-footer">
+        <input type="text" id="chatInput" placeholder="Escribe tu mensaje..." />
+        <button class="send-button" onclick="sendMessage()">Enviar</button>
+      </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
 
     <script src="js/components.js"></script>
 

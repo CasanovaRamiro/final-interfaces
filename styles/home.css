@@ -15,7 +15,7 @@ h1 {
 /* Estilos generales del nav */
 nav {
   background-color: #003366; /* Color de fondo del nav */
-  padding: 10px 20px; 
+  padding: 10px 20px;
   margin: 0;
 }
 
@@ -28,69 +28,69 @@ nav {
   padding: 0;
   width: 100%;
 }
-.nav-ul a,#perfil {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    padding: 8px 12px;
-  }
-  
-  .nav-ul a:hover {
-    color: #d4d6d5;
-  }
+.nav-ul a,
+#perfil {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 8px 12px;
+}
 
-#perfil:hover{
-    color: #d4d6d5;
+.nav-ul a:hover {
+  color: #d4d6d5;
+}
+
+#perfil:hover {
+  color: #d4d6d5;
 }
 
 /*menu desplegable*/
 
 nav ul li {
-    position: relative;
-  }
-  
-  nav ul li .interno {
-    display: block;
-    text-align: right;
-  }
-  
-  nav ul li .interno:hover {
-    cursor: pointer;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: -200%;
-    min-width: 9rem;
-  }
-  
-  .dropdown-content li {
-    display: block;
-  }
-  
-  .dropdown-content li a {
-    color: #000000;
-    padding: 0.4rem 0rem;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content li a:hover {
-    font-weight: bolder;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  /*fin menu desp*/
+  position: relative;
+}
 
-  svg {
-    width: 1em;
-    color: #ffffff;
-  }
+nav ul li .interno {
+  display: block;
+  text-align: right;
+}
 
+nav ul li .interno:hover {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -200%;
+  min-width: 9rem;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+.dropdown-content li a {
+  color: #000000;
+  padding: 0.4rem 0rem;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li a:hover {
+  font-weight: bolder;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/*fin menu desp*/
+
+svg {
+  width: 1em;
+  color: #ffffff;
+}
 
 /* Estilo de los elementos del menú */
 .nav-li:first-child {
@@ -108,15 +108,13 @@ nav ul li {
 
 /* Estilo de los enlaces */
 
-
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   padding: 2em;
   gap: 2em;
-  grid-template-areas: "cercano calendario" "anterior calendario2";
-  
+  grid-template-areas: "cercano calendario" "anterior horario";
 }
 .turnos {
   font-family: "Arial", sans-serif;
@@ -125,19 +123,18 @@ nav ul li {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  
 }
 .turnos-cercanos {
-grid-area: cercano;
+  grid-area: cercano;
 }
 .turnos-anteriores {
-grid-area: anterior;
+  grid-area: anterior;
 }
 .calendario {
-grid-area: calendario;
+  grid-area: calendario;
 }
-.calendario2 {
-grid-area: calendario2;
+.horarios-medicos {
+  grid-area: horario;
 }
 
 /****************
@@ -181,7 +178,7 @@ grid-area: calendario2;
 }
 
 .date {
-  background-color: rgb(135, 206, 235,50%);
+  background-color: rgb(135, 206, 235, 50%);
 }
 
 .day {
@@ -200,10 +197,10 @@ grid-area: calendario2;
 
 .navButton {
   font-size: 1.5em;
-  background-color: rgb(135, 206, 235,50%);
+  background-color: rgb(135, 206, 235, 50%);
   border: none;
   color: white;
-  padding: 10px 20px;
+  padding: 5px 10px;
   cursor: pointer;
   border-radius: 5px;
   margin: 5px;
@@ -213,181 +210,230 @@ grid-area: calendario2;
   background-color: #5bb4d7;
 }
 
-
 /* Estilos de las card de turnos*/
-.turno-proximo,.turno-anterior {
-    display: flex;
-    align-items: center;
-    background-color: rgb(135, 206, 235,50%);
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2em;
-    
+.turno-proximo,
+.turno-anterior {
+  display: flex;
+  align-items: center;
+  background-color: rgb(135, 206, 235, 50%);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2em;
 }
 
-.turno-proximo img,.turno-anterior img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-right: 15px;
-    object-fit: cover;
+.turno-proximo img,
+.turno-anterior img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
 }
 
 .texto-container {
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-start; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .texto-turno {
-    margin: 5px 0;
-    color: #333;
+  margin: 5px 0;
+  color: #333;
 }
 
+.modificar {
+  text-decoration: underline;
+}
+.modificar:hover {
+  color: #535353;
+}
+.modificaciones-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
 .texto-turno:first-of-type,
 .texto-turno:nth-of-type(2) {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /* Estilos del widget de chat */
 .chat-widget {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 300px;
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+/* Estado minimizado */
+.minimized {
+  height: 40px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.chat-header {
+  background-color: #003366;
+  color: #ffffff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.close-chat {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.user-message {
+  background-color: #d1e7ff;
+  color: #333;
+  align-self: flex-end;
+  border-top-right-radius: 0;
+  border-radius: 3px;
+}
+.bot-message {
+  background-color: #f1f1f1;
+  color: #333;
+  align-self: flex-start;
+  border-top-left-radius: 0;
+  border-radius: 3px;
+}
+/* Cuerpo del chat */
+.chat-body {
+  padding: 10px;
+  height: 200px;
+  overflow-y: auto;
+  color: #333;
+  font-size: 0.9em;
+}
+
+.chat-footer {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+.chat-footer input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 1em;
+}
+
+.send-button {
+  background-color: #003366;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #00509e;
+}
+
+.hidden {
+  display: none;
+}
+
+/*Horarios de los medicos*/
+#medico-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+#foto-medico {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+#horarios-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.dia {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.hora {
+  padding: 5px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.hora:hover {
+  background-color: #d1e7ff;
+}
+
+/*footer*/
+footer {
+  background-color: #000000;
+  color: #cecece;
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  ul {
+    list-style-type: none;
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-    transition: height 0.3s ease;
   }
-  
-  /* Estado minimizado */
-  .minimized {
-    height: 40px;
-    width: 200px;
-    cursor: pointer;
+  svg {
+    width: 1em;
   }
-  
-  .chat-header {
-    background-color: #003366;
-    color: #ffffff;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .chat-header p {
-    margin: 0;
-    font-weight: bold;
-  }
-  
-  .close-chat {
-    background: none;
-    border: none;
-    color: #ffffff;
-    font-size: 1.2em;
-    cursor: pointer;
-  }
-  
-  .user-message {
-    background-color: #d1e7ff;
-    color: #333;
-    align-self: flex-end;
-    border-top-right-radius: 0;
-    border-radius: 3px;
-  }
-  .bot-message {
-    background-color: #f1f1f1;
-    color: #333;
-    align-self: flex-start;
-    border-top-left-radius: 0;
-    border-radius: 3px;
-  }
-  /* Cuerpo del chat */
-  .chat-body {
-    padding: 10px;
-    height: 200px;
-    overflow-y: auto;
-    color: #333;
-    font-size: 0.9em;
-  }
-  
-  .chat-footer {
-    display: flex;
-    border-top: 1px solid #ccc;
-  }
-  
-  .chat-footer input {
-    flex-grow: 1;
-    padding: 10px;
-    border: none;
-    outline: none;
-    font-size: 1em;
-  }
-  
-  .send-button {
-    background-color: #003366;
-    color: #ffffff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .send-button:hover {
-    background-color: #00509e;
-  }
-  
-  .hidden {
-    display: none;
-  }
-
-
-  /*footer*/
-  footer {
-    background-color: #000000;
-    color: #cecece;
-    padding: 1em;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    ul {
-      list-style-type: none;
-      display: flex;
-      flex-direction: column;
-    }
-    svg {
-      width: 1em;
-    }
-    a {
-      text-decoration: none;
-      color: #cecece;
-    }
-    li {
-      display: flex;
-      gap: 0.5em;
-      align-items: flex-end;
-    }
-  }
-  .interno {
+  a {
     text-decoration: none;
-    color: #ffffff;
-  }
-  span {
-    font-weight: bold;
-  }
-  .copy {
-    margin: 0;
-    padding: 1em;
-    text-align: center;
-    font-size: small;
-    background-color: #000000;
     color: #cecece;
   }
-  
+  li {
+    display: flex;
+    gap: 0.5em;
+    align-items: flex-end;
+  }
+}
+.interno {
+  text-decoration: none;
+  color: #ffffff;
+}
+span {
+  font-weight: bold;
+}
+.copy {
+  margin: 0;
+  padding: 1em;
+  text-align: center;
+  font-size: small;
+  background-color: #000000;
+  color: #cecece;
+}
