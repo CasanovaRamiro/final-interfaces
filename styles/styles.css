@@ -115,8 +115,10 @@ body{
     background-color: #004e9c;
 }
 
-
-.form-login .login-link:hover {
+.login-link{
+    color: #003366;
+}
+.login-link:hover {
     text-decoration: underline;
     color: #004e9c;
 }
