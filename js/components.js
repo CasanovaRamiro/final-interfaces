@@ -8,12 +8,16 @@ class Components {
                     <li class="nav-li"><a href="turnos.html" class="interno">Pedir Turno</a></li>
                     <li class="nav-li"><a href="salaDeEspera.html" class="interno">Teleconsulta</a></li>
                     <li class="nav-li dropdown">
-                        <p id="perfil" class="nav-li">Perfil</p>
-                        <ul class="dropdown-content">
-                            <li><a href="perfil.html" class="interno">Mi perfil</a></li>
-                            <li><a href="historial.html" class="interno">Historial</a></li>
-                            <li><a href="index.html" class="interno">Cerrar sesión</a></li>
-                        </ul>
+                        <div class="container-usuario">
+                            <img class="foto-perfil" src="/img/default-user.png" alt="foto de usuario">
+                            <p id="perfil" class="nav-li">Perfil</p>
+                        </div>
+                            <ul class="dropdown-content">
+                                <li><a href="perfil.html" class="interno">Mi perfil</a></li>
+                                <li><a href="historial.html" class="interno">Historial</a></li>
+                                <li><a href="index.html" class="interno">Cerrar sesión</a></li>
+                            </ul>
+                        
                     </li>
                 </ul>
             </nav>`;
