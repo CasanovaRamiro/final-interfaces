@@ -5,13 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/home.css" />
     <title>Document</title>
+    <style>
+      #view {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+
+      .turnos-anteriores {
+        width: 100%;
+        max-width: 800px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 0;
+      }
+
+      .turno-anterior {
+        width: 100%;
+        max-width: 350px;
+      }
+
+      .turnos-anteriores h3 {
+        width: 100%;
+        border-top-right-radius: 12px;
+        border-top-left-radius: 12px;
+        margin: 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        color: white;
+        background-color: #003366;
+      }
+    </style>
   </head>
   <body>
-    <div id="navbar-placeholder"></div>
-    <!--Aca ponemos el contenido-->
-    <div id="footer-placeholder"></div>
+  <div id="navbar-placeholder"></div>
+  <section class="container">
+    <div id="view">
+      <article class="turnos turnos-anteriores">
+        <h3>Turnos anteriores</h3>
+        <div class="turno-anterior">
+        <img src="img/medico 1.jfif" alt="Edgardo López" />
+        <div class="texto-container">
+          <p class="texto-turno">Martes 05 de Noviembre de 2024 11:00 hs</p>
+          <p class="texto-turno">Lorena Delrio</p>
+          <p class="texto-turno">Cardiología</p>
+        </div>
+      </div>
+        <div class="turno-anterior">
+          <img src="img/medico 5.jpg" alt="Edgardo López" />
+          <div class="texto-container">
+            <p class="texto-turno">Martes 05 de Noviembre de 2024 11:00 hs</p>
+            <p class="texto-turno">Gonzalo Gimenez</p>
+            <p class="texto-turno">Traumatología</p>
+          </div>
+        </div>
+        <div class="turno-anterior">
+          <img src="img/medico 7.jfif" alt="Gonzalo Gimenez" />
+          <div class="texto-container">
+            <p class="texto-turno">Lunes 10 de Junio de 2024 15:00 hs</p>
+            <p class="texto-turno">Oscar Bona</p>
+            <p class="texto-turno">Endrcrinología</p>
+          </div>
+        </div>
+        <div class="turno-anterior">
+          <img src="img/medico 3.jfif" alt="Leandro Delrio" />
+          <div class="texto-container">
+            <p class="texto-turno">Lunes 06 de Mayo de 2024 18:40 hs</p>
+            <p class="texto-turno">Leandro Delrio</p>
+            <p class="texto-turno">Cardiología</p>
+          </div>
+        </div>
+        <div class="turno-anterior">
+          <img src="img/medico 2.jfif" alt="Gonzalo Gimenez" />
+          <div class="texto-container">
+            <p class="texto-turno">Lunes 10 de Junio de 2024 15:00 hs</p>
+            <p class="texto-turno">Eldo Ctorsito</p>
+            <p class="texto-turno">Endrcrinología</p>
+          </div>
+        </div>
+        <div class="turno-anterior">
+          <img src="img/medico 1.jfif" alt="Leandro Delrio" />
+          <div class="texto-container">
+            <p class="texto-turno">Lunes 06 de Mayo de 2024 18:40 hs</p>
+            <p class="texto-turno">Lorena Delrio</p>
+            <p class="texto-turno">Cardiología</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <div id="footer-placeholder"></div>
 
-    <script src="js/components.js"></script>
-    <script src="js/home.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/home.js"></script>
   </body>
 </html>
