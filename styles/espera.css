@@ -1,0 +1,57 @@
+.container{
+    margin: 11rem 6rem;
+    background-color: rgba(255, 255, 255, 0.712);
+    padding: 10px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-self: center;
+}
+
+
+.container-control{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+
+
+.numero{
+font-size:xx-large;
+color: black;
+}
+.texto-espera{
+margin: 1rem;
+color: #003366;
+}
+.a-text{
+    color: #003366;
+}
+
+.btn-teleconsulta{
+    text-decoration: none;
+    margin: 1rem;
+    padding: 15px 30px;
+    font-size:x-large;
+    background: #003366;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.a-btn{
+    color: #ffffff;
+    text-decoration: none;
+}
+.btn-teleconsulta:after{
+    color: #ffffff;
+    text-decoration: none;
+}
+

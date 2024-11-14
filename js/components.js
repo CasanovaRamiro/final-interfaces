@@ -6,7 +6,7 @@ class Components {
                 <ul class="nav-ul">
                     <li class="nav-li"><a href="home.html" class="interno">Memorial Chastain Park</a></li>
                     <li class="nav-li"><a href="turnos.html" class="interno">Pedir Turno</a></li>
-                    <li class="nav-li"><a href="teleconsultas.html" class="interno">Teleconsulta</a></li>
+                    <li class="nav-li"><a href="salaDeEspera.html" class="interno">Teleconsulta</a></li>
                     <li class="nav-li dropdown">
                         <p id="perfil" class="nav-li">Perfil</p>
                         <ul class="dropdown-content">
