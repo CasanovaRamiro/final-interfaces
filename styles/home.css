@@ -558,3 +558,27 @@ span {
   background-color: #ffffff;
 }
 
+
+
+ @media (max-width: 1040px){
+  .texto-portada{
+    top: 32rem;
+    left: 2rem;
+  }
+  .portada{
+    height: 70vh;
+  }
+  .container{
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .preguntas-frecuentes-container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-img-preg{
+    height: auto;
+  }
+ }
+
+
