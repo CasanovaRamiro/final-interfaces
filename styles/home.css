@@ -92,6 +92,7 @@ nav ul li .interno:hover {
 }
 /*fin menu desp*/
 
+
 svg {
   width: 1em;
   color: #ffffff;
@@ -111,11 +112,25 @@ svg {
   margin-left: auto;
 }
 
+/*Portada*/
+.portada{
+  height: 80vh;
+  overflow: hidden;
+
+  }
+
+  .texto-portada{
+    color: #003366;
+position: absolute;
+top: 32rem;
+left: 24%;
+  }
+
 /* Estilo de los turnos */
 
 .container {
   display: flex;
-  padding: 5em 2em 1em 2em;
+  padding: 2em 2em 1em 2em;
   gap: 2em;
 justify-content: space-around;
 align-content: center;
@@ -412,6 +427,64 @@ align-content: center;
   background-color: #66cc99;
 }
 
+
+
+/*Seccion preguntas frecuentes*/
+
+.preguntas-frecuentes-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items:flex-start;
+  
+}
+
+#titulo-preguntas{
+  font-weight: bold;
+  color: #003366;
+}
+
+.faq-container {
+  margin: 0 ;
+  padding: 2rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+}
+
+.faq-question {
+  cursor: pointer;
+  font-weight: bold;
+  color: #003366;
+  transition: color 0.3s;
+}
+
+.faq-question:hover {
+  color: #66cc99;
+}
+
+.faq-answer {
+  display: none;
+  margin-top: 1rem;
+  color: #333;
+}
+.faq-answer.visible{
+  display: block;
+}
+
+.container-img-preg{
+  padding: 5rem 2rem;
+  position: relative;
+  height: 1110px;
+}
+.sticky-img{
+position: sticky;
+top: 10rem;
+}
+
+
 /*footer*/
 footer {
   background-color: #000000;
@@ -452,5 +525,9 @@ span {
   font-size: small;
   background-color: #000000;
   color: #cecece;
+}
+
+.preguntas-frecuentes-container{
+  background-color: #ffffff;
 }
 
