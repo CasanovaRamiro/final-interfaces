@@ -120,6 +120,7 @@
     cursor: pointer;
     font-weight: bold;
     width: 200px;
+    height: 100%;
 }
 
 .historial-btn:hover {
