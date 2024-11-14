@@ -1,5 +1,5 @@
 .container{
-    margin: 11rem 6rem;
+    margin: 5rem 5rem 2rem 5rem;
     background-color: rgba(255, 255, 255, 0.712);
     padding: 10px 40px;
     border-radius: 12px;
@@ -9,6 +9,7 @@
     flex-direction: column;
     width: 40%;
     align-self: center;
+    gap: 0;
 }
 
 
@@ -55,3 +56,10 @@ color: #003366;
     text-decoration: none;
 }
 
+.img-container{
+  height: 15rem;
+}
+img{
+    width: auto;
+    height: 15rem;
+}
