@@ -5,6 +5,7 @@
 body{
     color: #003366;
     background-image: url('https://saludconlupa.com/media/images/shutterstock_131191718.width-1920.jpg');
+    background-repeat: no-repeat;
 }
 
 .index h1{
