@@ -3,17 +3,36 @@
 ****************/
 
 body{
-    color: #003366;
-    background-image: url('https://saludconlupa.com/media/images/shutterstock_131191718.width-1920.jpg');
+    background-image: url('https://img.freepik.com/foto-gratis/blur-hospital_1203-7972.jpg');
+    background-size: cover;      
+    background-position: center; 
     background-repeat: no-repeat;
+    height: 100vh;               
+    margin: 0;
+   
 }
 
 .index h1{
-    color: #003366;
-    padding: 20px;
+    font-size: 50px;
     margin-top: 200px;
+    color: #003366;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1),
+        0 0 20px rgba(255, 255, 255, 1),
+        0 0 30px rgba(255, 255, 255, 1);
+    
 }
-
+.nav-index button {
+    height: 40px;
+    width: 150px;
+    font-size: 18px;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.37);
+    border-radius: 8px;
+    cursor: pointer;
+    border: solid 1px #003366;
+    color: #003366;
+}
 .header-index {
     display: flex;
     flex-direction: row;
@@ -27,16 +46,7 @@ body{
     gap: 10px; 
 }
 
-.nav-index button {
-    height: 40px;
-    width: 150px;
-    background-color: rgba(255, 255, 255, 0.37);
-    border-radius: 8px;
-    cursor: pointer;
-    border: solid 1px #003366;
-    color: #003366;
-    font-size: 18px;
-}
+
 
 .nav-index button:hover{
     font-weight: bold;
@@ -189,3 +199,4 @@ body{
     color: #666;
     text-align: left;
 }
+
