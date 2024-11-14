@@ -177,7 +177,7 @@ class Components {
                             <i class="screen-icon"><span class="material-symbols-outlined"> screen_share </span></i>
                         </button>
                         <button class="control-btn hangup-btn">
-                            <i class="phone-icon"><span class="material-symbols-outlined"> call_end </span></i>
+                            <i class="phone-icon"><a class="hangup-a-btn" href="home.html"><span class="material-symbols-outlined"> call_end </span></a></i>
                         </button>
                     </div>
                 </div>

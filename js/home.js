@@ -68,6 +68,11 @@ function generateCalendar(month) {
     dateDiv.classList.add("date");
     dateDiv.textContent = day;
     daysDiv.appendChild(dateDiv);
+    const link = document.createElement("a");
+    link.href = "turnos.html";
+    link.appendChild(dateDiv);
+    daysDiv.appendChild(link);
+    link.classList.add("a-date");
   }
 
   // Añadir la cuadrícula de días al mes y el mes al contenedor del calendario
