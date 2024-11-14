@@ -63,3 +63,19 @@ img{
     width: auto;
     height: 15rem;
 }
+
+@media (max-width: 900px){
+    .btn-teleconsulta{
+        padding: 3px 6px ;
+    }
+    .container-control {
+        flex-direction: column-reverse;
+    }
+    .img-container{
+        height: 5rem;
+      }
+      img{
+          width: auto;
+          height: 5rem;
+      }
+}
