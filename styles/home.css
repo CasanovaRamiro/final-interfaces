@@ -31,28 +31,28 @@ nav {
   margin: 0;
   padding: 0;
   width: 100%;
-  
+  font-weight: bolder;
 }
 .nav-ul a,
 #perfil {
   text-decoration: none;
   color: #ffffff;
-  font-weight: bold;
   padding: 0;
 }
 
 .nav-ul a:hover {
-  color: #d4d6d5;
+  color: rgb(206, 241, 255);
 }
 
 #perfil:hover {
-  color: #d4d6d5;
+  color: rgb(206, 241, 255);
 }
 
 /*menu desplegable*/
 
 nav ul li {
   position: relative;
+  color: #ffffff;
 }
 
 nav ul li .interno {
@@ -62,30 +62,34 @@ nav ul li .interno {
 
 nav ul li .interno:hover {
   cursor: pointer;
+  
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
   top: 100%;
-  left: -250%;
-  min-width: 9rem;
+  left: -310%;
+  min-width: 11rem;
   box-sizing: border-box;
+  background-color: #003366;
+  color: #ffffff;
 }
 
 .dropdown-content li {
   display: block;
+
 }
 
 .dropdown-content li a {
-  color: #000000;
-  padding: 0.4rem 0rem;
+  color: #ffffff;
+  padding: 0.4rem 0.6rem;
   text-decoration: none;
   display: block;
 }
 
 .dropdown-content li a:hover {
-  font-weight: bolder;
+  color: rgb(206, 241, 255);
 }
 
 .dropdown:hover .dropdown-content {
