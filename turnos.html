@@ -3,15 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="https://cdn.metroui.org.ua/current/metro.css"> -->
     <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/turnos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
     <title>Document</title>
   </head>
   <body>
     <div id="navbar-placeholder"></div>
-    <!--Aca ponemos el contenido-->
+    <div class = "container">
+      <!-- <a onclick="stepperMethod('next')"><div data-role="stepper" data-steps="5" id="stepper"></div></a> -->
+
+      <!-- <div class="d-flex flex-justify-center mt-4">
+          <button class="button m-1" onclick="stepperMethod('first')">First</button>
+          <button class="button m-1" onclick="stepperMethod('prev')">Prev</button>
+          <button class="button m-1" onclick="stepperMethod('next')">Next</button>
+          <button class="button m-1" onclick="stepperMethod('last')">Last</button>
+      </div> -->
+
+      <!-- <script>
+          function stepperMethod (m){
+              var stepper = Metro.getPlugin('#stepper','stepper');
+              stepper[m]();
+          }
+      </script> -->
+      <!-- <div height="800px" class="stepper" id="stepper">
+        <div class="steps-container">
+          <div class="steps">
+            <div class="step" icon="fa fa-pencil-alt" id="1">
+              <div class="step-title">
+                <span class="step-number">01</span>
+                <div class="step-text">Basic Information</div>
+              </div>
+            </div>
+            <div class="step" icon="fa fa-info-circle" id="2">
+              <div class="step-title">
+                <span class="step-number">02</span>
+                <div class="step-text">Personal Data</div>
+              </div>
+            </div>
+            <div class="step" icon="fa fa-book-reader" id="3">
+              <div class="step-title">
+                <span class="step-number">03</span>
+                <div class="step-text">Terms and Conditions</div>
+              </div>
+            </div>
+            <div class="step" icon="fa fa-check" id="4">
+              <div class="step-title">
+                <span class="step-number">04</span>
+                <div class="step-text">Finish</div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- <div class="stepper-content-container">
+          <div class="stepper-content fade-in" stepper-label="1">
+            <div>Step 1</div>
+          </div>
+          <div class="stepper-content fade-in" stepper-label="2">
+            <div>Step 2</div>
+          </div>
+          <div class="stepper-content fade-in" stepper-label="3">
+            <div>Step 3</div>
+          </div>
+          <div class="stepper-content fade-in" stepper-label="4">
+            <div>Step 4</div>
+          </div>
+        </div>
+      </div> -->
+      <ol class="flex items-center w-full text-xs text-gray-900 font-medium sm:text-base">
+        <li class="flex w-full relative text-indigo-600  after:content-['']  after:w-full after:h-0.5  after:bg-indigo-600 after:inline-block after:absolute lg:after:top-5 after:top-3 after:left-4">
+           <div class="block whitespace-nowrap z-10">
+               <span class="w-6 h-6 bg-indigo-600 border-2 border-transparent rounded-full flex justify-center items-center mx-auto mb-3 text-sm text-white lg:w-10 lg:h-10">1</span> Step 1
+           </div>
+        </li>
+        <li class="flex w-full relative text-gray-900  after:content-['']  after:w-full after:h-0.5  after:bg-gray-200 after:inline-block after:absolute lg:after:top-5 after:top-3 after:left-4">
+           <div class="block whitespace-nowrap z-10">
+               <span class="w-6 h-6 bg-indigo-50 border-2 border-indigo-600 rounded-full flex justify-center items-center mx-auto mb-3 text-sm text-indigo-600 lg:w-10 lg:h-10">2</span> Step 2
+           </div>
+        </li>
+        <li class="flex w-full relative text-gray-900  after:content-['']  after:w-full after:h-0.5  after:bg-gray-200 after:inline-block after:absolute lg:after:top-5  after:top-3 after:left-4">
+           <div class="block whitespace-nowrap z-10">
+               <span class="w-6 h-6 bg-gray-50 border-2 border-gray-200 rounded-full flex justify-center items-center mx-auto mb-3 text-sm  lg:w-10 lg:h-10">3</span> Step 3
+           </div>
+        </li>
+        <li class="flex w-full relative text-gray-900  after:content-['']  after:w-full after:h-0.5  after:bg-gray-200 after:inline-block after:absolute lg:after:top-5 after:top-3 after:left-4">
+           <div class="block whitespace-nowrap z-10">
+               <span class="w-6 h-6 bg-gray-50 border-2 border-gray-200 rounded-full flex justify-center items-center mx-auto mb-3 text-sm  lg:w-10 lg:h-10">4</span> Step 4
+           </div>
+        </li>
+        <li class="flex w-full relative text-gray-900  ">
+           <div class="block whitespace-nowrap z-10">
+               <span class="w-6 h-6 bg-gray-50 border-2 border-gray-200 rounded-full flex justify-center items-center mx-auto mb-3 text-sm  lg:w-10 lg:h-10">5</span> Step 5
+           </div>
+        </li>
+        </ol>
+    </div>
     <div id="footer-placeholder"></div>
 
     <script src="js/components.js"></script>
     <script src="js/home.js"></script>
+    <!-- <script>
+      const stepper = document.querySelector('#stepper');
+      new CDB.Stepper(stepper);
+    </script> -->
+    <!-- <script src="https://cdn.metroui.org.ua/current/metro.js"></script> -->
   </body>
 </html>
