@@ -1,112 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="https://cdn.metroui.org.ua/current/metro.css"> -->
-    <link rel="stylesheet" href="styles/home.css" />
-    <link rel="stylesheet" href="styles/turnos.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
-    <title>Document</title>
-  </head>
-  <body>
-    <div id="navbar-placeholder"></div>
-    <div class = "container">
-      <!-- <a onclick="stepperMethod('next')"><div data-role="stepper" data-steps="5" id="stepper"></div></a> -->
 
-      <!-- <div class="d-flex flex-justify-center mt-4">
-          <button class="button m-1" onclick="stepperMethod('first')">First</button>
-          <button class="button m-1" onclick="stepperMethod('prev')">Prev</button>
-          <button class="button m-1" onclick="stepperMethod('next')">Next</button>
-          <button class="button m-1" onclick="stepperMethod('last')">Last</button>
-      </div> -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" href="https://cdn.metroui.org.ua/current/metro.css"> -->
+  <link rel="stylesheet" href="styles/home.css" />
+  <link rel="stylesheet" href="styles/turnos.css" />
+  <link href="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/css/pagedone.css " rel="stylesheet" />
+  <title>Document</title>
+</head>
 
-      <!-- <script>
-          function stepperMethod (m){
-              var stepper = Metro.getPlugin('#stepper','stepper');
-              stepper[m]();
-          }
-      </script> -->
-      <!-- <div height="800px" class="stepper" id="stepper">
-        <div class="steps-container">
-          <div class="steps">
-            <div class="step" icon="fa fa-pencil-alt" id="1">
-              <div class="step-title">
-                <span class="step-number">01</span>
-                <div class="step-text">Basic Information</div>
-              </div>
-            </div>
-            <div class="step" icon="fa fa-info-circle" id="2">
-              <div class="step-title">
-                <span class="step-number">02</span>
-                <div class="step-text">Personal Data</div>
-              </div>
-            </div>
-            <div class="step" icon="fa fa-book-reader" id="3">
-              <div class="step-title">
-                <span class="step-number">03</span>
-                <div class="step-text">Terms and Conditions</div>
-              </div>
-            </div>
-            <div class="step" icon="fa fa-check" id="4">
-              <div class="step-title">
-                <span class="step-number">04</span>
-                <div class="step-text">Finish</div>
-              </div>
-            </div>
+<body>
+  <div id="navbar-placeholder"></div>
+  <div class="stepper-container">
+
+    <ol class="flex items-center w-full text-sm text-gray-500 font-medium sm:text-base mb-12">
+      <li id="step-1"
+        class="flex md:w-full items-center text-indigo-600  sm:after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-4 xl:after:mx-8 ">
+        <div class="flex items-center whitespace-nowrap after:content-['/'] sm:after:hidden after:mx-2 ">
+          <span
+            class="w-6 h-6 bg-indigo-600 border border-indigo-200 rounded-full flex justify-center items-center mr-3 text-sm text-white lg:w-10 lg:h-10">1</span>
+            Info Personal
+        </div>
+      </li>
+      <li id="step-2"
+        class="flex md:w-full items-center text-gray-600 sm:after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-1 after:hidden sm:after:inline-block after:mx-4 xl:after:mx-8 ">
+        <div class="flex items-center whitespace-nowrap after:content-['/'] sm:after:hidden after:mx-2 ">
+          <span
+            class="w-6 h-6 bg-gray-100 border border-gray-200 rounded-full flex justify-center items-center mr-3 lg:w-10 lg:h-10">2</span>
+            Info de
+        </div>
+      </li>
+      <li id="step-3" class="flex md:w-full items-center text-gray-600 ">
+        <div class="flex items-center  ">
+          <span
+            class="w-6 h-6 bg-gray-100 border border-gray-200 rounded-full flex justify-center items-center mr-3 lg:w-10 lg:h-10">3</span>
+          Confirmación
+        </div>
+      </li>
+    </ol>
+
+    <div class="flex flex-col">
+      <form action="./home.html" class="">
+        <div class="flex gap-x-6 mb-6">
+          <div class="w-full relative">
+            <label class="flex  items-center mb-2 text-gray-600 text-sm font-medium">Nombre <svg width="7" height="7"
+              class="ml-1" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z"
+                fill="#EF4444" />
+            </svg>
+            </label>
+            <input type="text" id="default-search"
+              class="block w-full h-11 px-5 py-2.5 bg-white leading-7 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none "
+              placeholder="Coloca tu nombre por favor" required>
           </div>
-        </div> -->
-        <!-- <div class="stepper-content-container">
-          <div class="stepper-content fade-in" stepper-label="1">
-            <div>Step 1</div>
-          </div>
-          <div class="stepper-content fade-in" stepper-label="2">
-            <div>Step 2</div>
-          </div>
-          <div class="stepper-content fade-in" stepper-label="3">
-            <div>Step 3</div>
-          </div>
-          <div class="stepper-content fade-in" stepper-label="4">
-            <div>Step 4</div>
+          <div class="w-full relative">
+            <label class="flex  items-center mb-2 text-gray-600 text-sm font-medium">Apellido<svg width="7" height="7"
+                class="ml-1" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z"
+                  fill="#EF4444" />
+              </svg>
+            </label>
+            <input type="text" id="default-search"
+              class="block w-full h-11 px-5 py-2.5 bg-white leading-7 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none "
+              placeholder="Y tu apellido aquí" required>
           </div>
         </div>
-      </div> -->
-      <ol class="flex items-center w-full text-xs text-gray-900 font-medium sm:text-base">
-        <li class="flex w-full relative text-indigo-600  after:content-['']  after:w-full after:h-0.5  after:bg-indigo-600 after:inline-block after:absolute lg:after:top-5 after:top-3 after:left-4">
-           <div class="block whitespace-nowrap z-10">
-               <span class="w-6 h-6 bg-indigo-600 border-2 border-transparent rounded-full flex justify-center items-center mx-auto mb-3 text-sm text-white lg:w-10 lg:h-10">1</span> Step 1
-           </div>
-        </li>
-        <li class="flex w-full relative text-gray-900  after:content-['']  after:w-full after:h-0.5  after:bg-gray-200 after:inline-block after:absolute lg:after:top-5 after:top-3 after:left-4">
-           <div class="block whitespace-nowrap z-10">
-               <span class="w-6 h-6 bg-indigo-50 border-2 border-indigo-600 rounded-full flex justify-center items-center mx-auto mb-3 text-sm text-indigo-600 lg:w-10 lg:h-10">2</span> Step 2
-           </div>
-        </li>
-        <li class="flex w-full relative text-gray-900  after:content-['']  after:w-full after:h-0.5  after:bg-gray-200 after:inline-block after:absolute lg:after:top-5  after:top-3 after:left-4">
-           <div class="block whitespace-nowrap z-10">
-               <span class="w-6 h-6 bg-gray-50 border-2 border-gray-200 rounded-full flex justify-center items-center mx-auto mb-3 text-sm  lg:w-10 lg:h-10">3</span> Step 3
-           </div>
-        </li>
-        <li class="flex w-full relative text-gray-900  after:content-['']  after:w-full after:h-0.5  after:bg-gray-200 after:inline-block after:absolute lg:after:top-5 after:top-3 after:left-4">
-           <div class="block whitespace-nowrap z-10">
-               <span class="w-6 h-6 bg-gray-50 border-2 border-gray-200 rounded-full flex justify-center items-center mx-auto mb-3 text-sm  lg:w-10 lg:h-10">4</span> Step 4
-           </div>
-        </li>
-        <li class="flex w-full relative text-gray-900  ">
-           <div class="block whitespace-nowrap z-10">
-               <span class="w-6 h-6 bg-gray-50 border-2 border-gray-200 rounded-full flex justify-center items-center mx-auto mb-3 text-sm  lg:w-10 lg:h-10">5</span> Step 5
-           </div>
-        </li>
-        </ol>
+        <div class="relative mb-6">
+          <label class="flex  items-center mb-2 text-gray-600 text-sm font-medium">Email<svg width="7"
+              height="7" class="ml-1" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z"
+                fill="#EF4444" />
+            </svg>
+          </label>
+          <input type="text" id="default-search"
+            class="block w-full h-11 px-5 py-2.5 bg-white leading-7 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none "
+            placeholder="tu.email@mail.com" required>
+        </div>
+        <div class="flex gap-x-6 mb-6">
+          <div class="w-full relative">
+            <label class="flex  items-center mb-2 text-gray-600 text-sm font-medium">DOB <svg width="7" height="7"
+                class="ml-1" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z"
+                  fill="#EF4444" />
+              </svg>
+            </label>
+            <input type="text" id="default-search"
+              class="block w-full h-11 px-5 py-2.5 bg-white leading-7 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none "
+              placeholder="" required>
+          </div>
+          <div class="w-full relative">
+            <label class="flex  items-center mb-2 text-gray-600 text-sm font-medium">Country <svg width="7" height="7"
+                class="ml-1" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z"
+                  fill="#EF4444" />
+              </svg>
+            </label>
+            <input type="text" id="default-search"
+              class="block w-full h-11 px-5 py-2.5 bg-white leading-7 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none "
+              placeholder="" required>
+          </div>
+        </div>
+        <div class="relative mb-6">
+          <label class="flex  items-center mb-2 text-gray-600 text-sm font-medium">Phone Number <svg width="7"
+              height="7" class="ml-1" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z"
+                fill="#EF4444" />
+            </svg>
+          </label>
+          <input type="text" id="default-search"
+            class="block w-full h-11 px-5 py-2.5 bg-white leading-7 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none "
+            placeholder="" required>
+        </div>
+        <button
+          class="w-52 h-12 shadow-sm rounded-full bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7">Next</button>
+      </form>
     </div>
-    <div id="footer-placeholder"></div>
+  </div>
+  <div id="footer-placeholder"></div>
 
-    <script src="js/components.js"></script>
-    <script src="js/home.js"></script>
-    <!-- <script>
-      const stepper = document.querySelector('#stepper');
-      new CDB.Stepper(stepper);
-    </script> -->
-    <!-- <script src="https://cdn.metroui.org.ua/current/metro.js"></script> -->
-  </body>
+  <script src="js/components.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/turnos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/js/pagedone.js"></script>
+
+</body>
+
 </html>
