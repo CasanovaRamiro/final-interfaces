@@ -112,7 +112,11 @@ function goStep1(){
           class="w-52 h-12 shadow-sm rounded-full bg-green-600 hover:bg-gray-800 transition-all duration-700 text-white text-base font-semibold leading-7">Next</button>
       </form>
     </div>`;
-    step2.appendChild(step2)
+    step.appendChild(step2);
+    var areas = document.getElementsByClassName('areas');
+    array.forEach( (a, index, areas) => {
+        document.removeChild(areas[index])
+    });
   }
 
 function goStep3(){
