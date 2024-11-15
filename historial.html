@@ -33,7 +33,7 @@
         max-width: 350px;
       }
 
-      .turnos-anteriores h3 {
+      .turnos-anteriores span {
         width: 100%;
         border-top-right-radius: 12px;
         border-top-left-radius: 12px;
@@ -42,6 +42,55 @@
         padding-bottom: 1rem;
         color: white;
         background-color: #003366;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .filter-controls {
+        width: 100%;
+        max-width: 800px;
+        margin: 20px auto;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .filter-select {
+        padding: 8px 12px;
+        border: 1px solid #003366;
+        border-radius: 4px;
+        font-size: 14px;
+        min-width: 200px;
+        background-color: white;
+      }
+
+      .filter-select:focus {
+        outline: none;
+        border-color: #004d99;
+        box-shadow: 0 0 0 2px rgba(0, 51, 102, 0.1);
+      }
+
+      .reset-button {
+        padding: 8px 16px;
+        background-color: #003366;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.2s;
+      }
+
+      .reset-button:hover {
+        background-color: #004d99;
+      }
+
+      .reset-button:active {
+        background-color: #002244;
       }
     </style>
   </head>
@@ -50,17 +99,20 @@
   <section class="container">
     <div id="view">
       <article class="turnos turnos-anteriores">
-        <h3>Turnos anteriores</h3>
+        <span>
+          <h3>Historial de Turnos</h3>
+          <div id="filter-placeholder"></div>
+        </span>
         <div class="turno-anterior">
-        <img src="img/medico 1.jfif" alt="Edgardo López" />
-        <div class="texto-container">
-          <p class="texto-turno">Martes 05 de Noviembre de 2024 11:00 hs</p>
-          <p class="texto-turno">Lorena Delrio</p>
-          <p class="texto-turno">Cardiología</p>
+          <img src="img/medico 1.jfif" alt="Lorena Delrio" />
+          <div class="texto-container">
+            <p class="texto-turno">Martes 05 de Noviembre de 2024 11:00 hs</p>
+            <p class="texto-turno">Lorena Delrio</p>
+            <p class="texto-turno">Cardiología</p>
+          </div>
         </div>
-      </div>
         <div class="turno-anterior">
-          <img src="img/medico 5.jpg" alt="Edgardo López" />
+          <img src="img/medico 5.jpg" alt="Gonzalo Gimenez" />
           <div class="texto-container">
             <p class="texto-turno">Martes 05 de Noviembre de 2024 11:00 hs</p>
             <p class="texto-turno">Gonzalo Gimenez</p>
@@ -68,11 +120,11 @@
           </div>
         </div>
         <div class="turno-anterior">
-          <img src="img/medico 7.jfif" alt="Gonzalo Gimenez" />
+          <img src="img/medico 7.jfif" alt="Oscar Bona" />
           <div class="texto-container">
             <p class="texto-turno">Lunes 10 de Junio de 2024 15:00 hs</p>
             <p class="texto-turno">Oscar Bona</p>
-            <p class="texto-turno">Endrcrinología</p>
+            <p class="texto-turno">Endocrinología</p>
           </div>
         </div>
         <div class="turno-anterior">
@@ -84,19 +136,68 @@
           </div>
         </div>
         <div class="turno-anterior">
-          <img src="img/medico 2.jfif" alt="Gonzalo Gimenez" />
+          <img src="img/medico 2.jfif" alt="Eldo Ctorsito" />
           <div class="texto-container">
             <p class="texto-turno">Lunes 10 de Junio de 2024 15:00 hs</p>
             <p class="texto-turno">Eldo Ctorsito</p>
-            <p class="texto-turno">Endrcrinología</p>
+            <p class="texto-turno">Endocrinología</p>
           </div>
         </div>
         <div class="turno-anterior">
-          <img src="img/medico 1.jfif" alt="Leandro Delrio" />
+          <img src="img/medico 1.jfif" alt="Lorena Delrio" />
           <div class="texto-container">
             <p class="texto-turno">Lunes 06 de Mayo de 2024 18:40 hs</p>
             <p class="texto-turno">Lorena Delrio</p>
             <p class="texto-turno">Cardiología</p>
+          </div>
+        </div>
+        <!-- New appointments -->
+        <div class="turno-anterior">
+          <img src="img/medico 4.jpg" alt="Marina Suarez" />
+          <div class="texto-container">
+            <p class="texto-turno">Miércoles 15 de Octubre de 2024 09:15 hs</p>
+            <p class="texto-turno">Marina Suarez</p>
+            <p class="texto-turno">Pediatría</p>
+          </div>
+        </div>
+        <div class="turno-anterior">
+          <img src="img/medico 6.png" alt="Roberto Perez" />
+          <div class="texto-container">
+            <p class="texto-turno">Jueves 20 de Septiembre de 2024 14:30 hs</p>
+            <p class="texto-turno">Roberto Perez</p>
+            <p class="texto-turno">Traumatología</p>
+          </div>
+        </div>
+        <div class="turno-anterior">
+          <img src="img/medico 8.jfif" alt="Carolina Martinez" />
+          <div class="texto-container">
+            <p class="texto-turno">Viernes 25 de Agosto de 2024 16:45 hs</p>
+            <p class="texto-turno">Carolina Martinez</p>
+            <p class="texto-turno">Dermatología</p>
+          </div>
+        </div>
+        <div class="turno-anterior">
+          <img src="img/medico 2.jfif" alt="Eldo Ctorsito" />
+          <div class="texto-container">
+            <p class="texto-turno">Lunes 12 de Julio de 2024 10:20 hs</p>
+            <p class="texto-turno">Eldo Ctorsito</p>
+            <p class="texto-turno">Endocrinología</p>
+          </div>
+        </div>
+        <div class="turno-anterior">
+          <img src="img/medico 5.jpg" alt="Gonzalo Gimenez" />
+          <div class="texto-container">
+            <p class="texto-turno">Martes 30 de Julio de 2024 13:00 hs</p>
+            <p class="texto-turno">Gonzalo Gimenez</p>
+            <p class="texto-turno">Traumatología</p>
+          </div>
+        </div>
+        <div class="turno-anterior">
+          <img src="img/medico 7.jfif" alt="Oscar Bona" />
+          <div class="texto-container">
+            <p class="texto-turno">Miércoles 08 de Agosto de 2024 11:30 hs</p>
+            <p class="texto-turno">Oscar Bona</p>
+            <p class="texto-turno">Endocrinología</p>
           </div>
         </div>
       </article>
