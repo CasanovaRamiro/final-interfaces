@@ -123,6 +123,9 @@
     background: #ff0000 !important;
 }
 
+.hangup-a-btn{
+    color: #000000;
+}
 .camera-off img {
     display: none;
 }

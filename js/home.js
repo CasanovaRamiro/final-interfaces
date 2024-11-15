@@ -68,6 +68,11 @@ function generateCalendar(month) {
     dateDiv.classList.add("date");
     dateDiv.textContent = day;
     daysDiv.appendChild(dateDiv);
+    const link = document.createElement("a");
+    link.href = "turnos.html";
+    link.appendChild(dateDiv);
+    daysDiv.appendChild(link);
+    link.classList.add("a-date");
   }
 
   // Añadir la cuadrícula de días al mes y el mes al contenedor del calendario
@@ -114,20 +119,26 @@ function closeChat(event) {
 function sendMessage() {
   const message = chatInput.value.trim();
   if (message) {
-    const newMessage = document.createElement("p");
-    newMessage.textContent = message;
-    chatBody.appendChild(newMessage);
     // Crear burbuja de mensaje del usuario
+    const userMessageContainer = document.createElement("div");
+    userMessageContainer.classList.add("user-message-container");
+    chatBody.appendChild(userMessageContainer);
+
+
     const userMessage = document.createElement("p");
     userMessage.classList.add("user-message");
     userMessage.innerHTML = message;
-    chatBody.appendChild(userMessage);
+    userMessageContainer.appendChild(userMessage);
 
     // Crear burbuja de respuesta automática
+    const botMessageContainer = document.createElement("div");
+    botMessageContainer.classList.add("bot-message-container");
+    chatBody.appendChild(botMessageContainer);
+
     const botMessage = document.createElement("p");
     botMessage.classList.add("bot-message");
     botMessage.textContent = "Buenos días! En qué podemos ayudarte?";
-    chatBody.appendChild(botMessage);
+    botMessageContainer.appendChild(botMessage);
 
     // Limpiar campo de entrada y hacer scroll hasta el final del chat
     chatInput.value = "";
@@ -340,3 +351,16 @@ function seleccionarHorario(medicoIndex, dia, hora) {
 }
 
 mostrarMedico();
+
+
+//seccion preguntas frecuentes
+document.addEventListener("DOMContentLoaded", function () {
+  const questions = document.querySelectorAll(".faq-question");
+
+  questions.forEach(question => {
+      question.addEventListener("click", () => {
+          const answer = question.nextElementSibling;
+          answer.classList.toggle("visible");
+      });
+  });
+});

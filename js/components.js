@@ -6,14 +6,18 @@ class Components {
                 <ul class="nav-ul">
                     <li class="nav-li"><a href="home.html" class="interno">Memorial Chastain Park</a></li>
                     <li class="nav-li"><a href="turnos.html" class="interno">Pedir Turno</a></li>
-                    <li class="nav-li"><a href="teleconsultas.html" class="interno">Teleconsulta</a></li>
+                    <li class="nav-li"><a href="salaDeEspera.html" class="interno">Teleconsulta</a></li>
                     <li class="nav-li dropdown">
-                        <p id="perfil" class="nav-li">Perfil</p>
-                        <ul class="dropdown-content">
-                            <li><a href="perfil.html" class="interno">Mi perfil</a></li>
-                            <li><a href="historial.html" class="interno">Historial</a></li>
-                            <li><a href="index.html" class="interno">Cerrar sesión</a></li>
-                        </ul>
+                        <div class="container-usuario">
+                            <img class="foto-perfil" src="/img/default-user.png" alt="foto de usuario">
+                            <p id="perfil" class="nav-li">Perfil</p>
+                        </div>
+                            <ul class="dropdown-content">
+                                <li><a href="perfil.html" class="interno">Mi perfil</a></li>
+                                <li><a href="historial.html" class="interno">Historial</a></li>
+                                <li><a href="index.html" class="interno">Cerrar sesión</a></li>
+                            </ul>
+                        
                     </li>
                 </ul>
             </nav>`;
@@ -177,7 +181,7 @@ class Components {
                             <i class="screen-icon"><span class="material-symbols-outlined"> screen_share </span></i>
                         </button>
                         <button class="control-btn hangup-btn">
-                            <i class="phone-icon"><span class="material-symbols-outlined"> call_end </span></i>
+                            <i class="phone-icon"><a class="hangup-a-btn" href="home.html"><span class="material-symbols-outlined"> call_end </span></a></i>
                         </button>
                     </div>
                 </div>
