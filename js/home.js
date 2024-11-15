@@ -152,7 +152,7 @@ const medicos = [
     id: 1,
     nombre: "Soledad Ramirez",
     especialidad: "Clínica Médica",
-    foto: "/img/medico 1.jfif",
+    foto: "./img/medico 1.jfif",
     disponibilidad: {
       Lunes: ["08:00", "09:00", "10:00", "11:00", "14:00", "15:00"],
       Martes: ["08:00", "10:00", "13:00", "15:00"],
@@ -166,7 +166,7 @@ const medicos = [
     id: 2,
     nombre: "Roberto Sánchez",
     especialidad: "Dermatología",
-    foto: "/img/medico 2.jfif",
+    foto: "./img/medico 2.jfif",
     disponibilidad: {
       Lunes: ["09:00", "14:00", "17:00", "19:00"],
       Martes: ["08:00", "11:00", "15:00"],
@@ -180,7 +180,7 @@ const medicos = [
     id: 3,
     nombre: "Leandro Delrio",
     especialidad: "Cardiología",
-    foto: "/img/medico 3.jfif",
+    foto: "./img/medico 3.jfif",
     disponibilidad: {
       Lunes: ["13:00", "14:00", "15:00", "16:00"],
       Martes: ["08:00", "11:00", "15:00", "16:00", "17:00", "18:00"],
@@ -194,7 +194,7 @@ const medicos = [
     id: 4,
     nombre: "Ezequiel Álvarez",
     especialidad: "Clínica médica",
-    foto: "/img/medico 4.jpg",
+    foto: "./img/medico 4.jpg",
     disponibilidad: {
       Lunes: ["13:00", "14:00", "17:00", "15:00"],
       Martes: ["08:00", "09:00", "10:00", "11:00", "15:00"],
@@ -209,7 +209,7 @@ const medicos = [
     id: 5,
     nombre: "Edgardo López",
     especialidad: "Traumatología",
-    foto: "/img/medico 5.jpg",
+    foto: "./img/medico 5.jpg",
     disponibilidad: {
       Lunes: ["09:00", "10:00", "11:00", "12:00", "14:00", "17:00"],
       Martes: ["08:00", "11:00", "15:00", "16:00"],
@@ -224,7 +224,7 @@ const medicos = [
     id: 6,
     nombre: "Sandra García",
     especialidad: "Anatomía Patológica",
-    foto: "/img/medico 6.png",
+    foto: "./img/medico 6.png",
     disponibilidad: {
       Lunes: ["09:00", "14:00", "17:00", "18:00", "19:00"],
       Martes: ["09:00", "11:00", "15:00"],
@@ -239,7 +239,7 @@ const medicos = [
     id: 7,
     nombre: "Gonzalo Gimenez",
     especialidad: "Endrcrinología",
-    foto: "/img/medico 7.jfif",
+    foto: "./img/medico 7.jfif",
     disponibilidad: {
       Lunes: ["08:00", "09:00", "17:00", "18:00", "19:00"],
       Martes: ["08:00", "10:00", "15:00"],
@@ -254,7 +254,7 @@ const medicos = [
     id: 8,
     nombre: "Gustavo Leguizamón",
     especialidad: "Hematología",
-    foto: "/img/medico 8.jfif",
+    foto: "./img/medico 8.jfif",
     disponibilidad: {
       Lunes: ["09:00", "13:00", "14:00", "17:00", "18:00"],
       Martes: ["09:00", "11:00", "15:00"],
@@ -269,7 +269,7 @@ const medicos = [
     id: 9,
     nombre: "Gabriel Lozano",
     especialidad: "Fisiatría",
-    foto: "/img/medico 9.jfif",
+    foto: "./img/medico 9.jfif",
     disponibilidad: {
       Lunes: ["09:00", "12:00", "13:00", "14:00", "15:00"],
       Martes: ["10:00", "11:00", "12:00", "13:00", "14:00", "15:00"],
@@ -284,7 +284,7 @@ const medicos = [
     id: 10,
     nombre: "María Laura Santillán",
     especialidad: "Otorrinolaringología",
-    foto: "/img/medico 10.jfif",
+    foto: "./img/medico 10.jfif",
     disponibilidad: {
       Lunes: ["11:00", "13:00", "14:00", "19:00"],
       Martes: ["08:00", "10:00", "11:00", "15:00"],
