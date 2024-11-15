@@ -167,7 +167,7 @@ class Components {
                 <div class="call-screen">
                     <div class="video-area">
                         <div class="placeholder-video">
-                            <img src="../img/doctor.jpg" alt="User camera placeholder" class="user-camera-img">
+                            <img src="./img/doctor.jpg" alt="User camera placeholder" class="user-camera-img">
                         </div>
                     </div>
                     <div class="video-controls">
@@ -233,11 +233,11 @@ class Components {
 
             if (isScreenSharing) {
                 placeholderVideo.innerHTML = `
-                    <img src="../img/doctor.jpg" alt="Screen share placeholder" class="screen-share-img">
+                    <img src="./img/doctor.jpg" alt="Screen share placeholder" class="screen-share-img">
                 `;
             } else {
                 placeholderVideo.innerHTML = `
-                    <img src="../img/doctor.jpg" alt="User camera placeholder" class="user-camera-img">
+                    <img src="./img/doctor.jpg" alt="User camera placeholder" class="user-camera-img">
                 `;
             }
         });
@@ -297,14 +297,14 @@ class Components {
 
             messageDiv.innerHTML = messageIndex % 2 === 0 ? `
                 <span class="msg-avatar">
-                    <img src="../img/doctor-profile.png" alt="User camera placeholder">
+                    <img src="./img/doctor-profile.png" alt="User camera placeholder">
                 </span>
                 <div class="msg-text">
                     ${msg}
                 </div>
             ` : `
                 <span class="msg-avatar">
-                    <img src="../img/default-user.png" alt="User camera placeholder">
+                    <img src="./img/default-user.png" alt="User camera placeholder">
                 </span>
                 <div class="msg-text">
                     ${msg}
