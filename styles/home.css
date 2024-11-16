@@ -286,6 +286,16 @@ align-content: center;
   font-weight: bold;
 }
 
+
+.texto-a{
+text-decoration: underline;
+
+}
+
+
+.textos-explicativos{
+  color: #003366;
+}
 /* Estilos del widget de chat */
 .chat-widget {
   position: fixed;
