@@ -1,4 +1,4 @@
-html{
+html {
   font-size: 16px;
 }
 
@@ -18,7 +18,7 @@ h1 {
 
 /* Estilos generales del nav */
 nav {
-  background-color: #003366; 
+  background-color: #003366;
   padding: 1rem;
   margin: 0;
   position: fixed;
@@ -52,11 +52,11 @@ nav {
   color: rgb(206, 241, 255);
 }
 
-.foto-perfil{
+.foto-perfil {
   width: 2rem;
   border-radius: 50%;
 }
-.container-usuario{
+.container-usuario {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -76,7 +76,6 @@ nav ul li .interno {
 
 nav ul li .interno:hover {
   cursor: pointer;
-  
 }
 
 .dropdown-content {
@@ -93,12 +92,11 @@ nav ul li .interno:hover {
 
 .dropdown-content li {
   display: block;
-
 }
 
 .dropdown-content li a {
   color: #ffffff;
-  padding: 0.4rem 0.6rem;
+  padding: 0.4rem;
   text-decoration: none;
   display: block;
 }
@@ -111,9 +109,6 @@ nav ul li .interno:hover {
   display: block;
 }
 /*fin menu desp*/
-
-
-
 
 /* Estilo de los elementos del menú */
 .nav-li:first-child {
@@ -130,18 +125,21 @@ nav ul li .interno:hover {
 }
 
 /*Portada*/
-.portada{
+.portada {
   height: 80vh;
   overflow: hidden;
+}
 
-  }
+.texto-portada {
+  color: #003366;
+  position: absolute;
+  bottom: 25%;
+  left: 19%;
+}
 
-  .texto-portada{
-    color: #003366;
-position: absolute;
-top:calc(25vw);
-left: 24%;
-  }
+.portada-img {
+  height: 80vh;
+}
 
 /* Estilo de los turnos */
 
@@ -149,8 +147,8 @@ left: 24%;
   display: flex;
   padding: 2rem 2rem 1rem 2rem;
   gap: 2rem;
-justify-content: space-around;
-align-content: center;
+  justify-content: space-around;
+  align-content: center;
 }
 .turnos {
   font-family: "Arial", sans-serif;
@@ -160,9 +158,9 @@ align-content: center;
   box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
   text-align: center;
 }
-.turno-anterior:hover, 
+.turno-anterior:hover,
 .turno-proximo:hover,
-.date:hover{
+.date:hover {
   background-color: #66cc99;
 }
 
@@ -215,7 +213,7 @@ align-content: center;
   background-color: #333;
   color: #fff;
 }
-.a-date{
+.a-date {
   color: #000000;
   text-decoration: none;
 }
@@ -291,14 +289,11 @@ align-content: center;
   font-weight: bold;
 }
 
-
-.texto-a{
-text-decoration: underline;
-
+.texto-a {
+  text-decoration: underline;
 }
 
-
-.textos-explicativos{
+.textos-explicativos {
   color: #003366;
 }
 /* Estilos del widget de chat */
@@ -313,7 +308,6 @@ text-decoration: underline;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  font-family: Arial, sans-serif;
   overflow: hidden;
   transition: height 0.3s ease;
 }
@@ -328,7 +322,7 @@ text-decoration: underline;
 .chat-header {
   background-color: #003366;
   color: #ffffff;
-  padding: 0.625;
+  padding: 0.625rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -351,23 +345,23 @@ text-decoration: underline;
   align-items: flex-start;
   margin-bottom: 0.625rem;
 }
-.user-message-container{
-display: flex;
-justify-content: flex-end;
+.user-message-container {
+  display: flex;
+  justify-content: flex-end;
 }
-.bot-message-container{
+.bot-message-container {
   display: flex;
   justify-content: flex-start;
-  }
+}
 .user-message {
   background-color: #003366;
   display: inline-block;
   color: #ffffff;
   padding: 0.625rem 1rem;
-    border-radius: 1rem;
-    word-wrap: break-word;
-    text-align: right;
-    margin: 0.32rem;
+  border-radius: 1rem;
+  word-wrap: break-word;
+  text-align: right;
+  margin: 0.32rem;
 }
 
 .bot-message {
@@ -375,10 +369,10 @@ justify-content: flex-end;
   color: #000000;
   display: inline-block;
   padding: 0.625rem 1rem;
-    border-radius: 1rem;
-    word-wrap: break-word;
-    text-align: left;
-    margin: 0.32rem;
+  border-radius: 1rem;
+  word-wrap: break-word;
+  text-align: left;
+  margin: 0.32rem;
 }
 /* Cuerpo del chat */
 .chat-body {
@@ -421,13 +415,24 @@ justify-content: flex-end;
 /*Horarios de los medicos*/
 #medico-container {
   display: flex;
+  flex-direction: row;
+  background-color: rgb(135, 206, 235, 50%);
+  justify-content: space-around;
+}
+.elegir-medico{
+  display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(135, 206, 235, 50%);
   gap: 2rem;
 }
-#medicos{
-  background-color:rgb(135, 206, 235, 50%);
+.semana-ant{
+align-self: flex-end;
+}
+.semana-sig{
+  align-self: flex-end;
+}
+#medicos {
+  background-color: rgb(135, 206, 235, 50%);
   margin: 0;
   margin-top: 1rem;
   padding: 1em;
@@ -439,10 +444,10 @@ justify-content: flex-end;
   border-radius: 50%;
   margin-right: 1rem;
 }
-.btn-medico{
-  background-color:rgb(0, 51, 102) ;
+.btn-medico {
+  background-color: rgb(0, 51, 102);
 }
-.btn-medico:hover{
+.btn-medico:hover {
   background-color: #014f9c;
 }
 
@@ -451,7 +456,7 @@ justify-content: flex-end;
   grid-template-columns: repeat(6, 1fr);
   gap: 2rem;
   padding: 1rem 3rem 3rem 3rem;
-  background-color:rgb(135, 206, 235, 50%);
+  background-color: rgb(135, 206, 235, 50%);
 }
 
 .dia {
@@ -476,26 +481,25 @@ justify-content: flex-end;
 .hora:hover {
   background-color: #66cc99;
 }
-
-
-
+.texto-a:hover{
+  color: #003366;
+}
 /*Seccion preguntas frecuentes*/
 
-.preguntas-frecuentes-container{
+.preguntas-frecuentes-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items:flex-start;
-  
+  align-items: flex-start;
 }
 
-#titulo-preguntas{
+#titulo-preguntas {
   font-weight: bold;
   color: #003366;
 }
 
 .faq-container {
-  margin: 0 ;
+  margin: 0;
   padding: 2rem;
 }
 
@@ -520,20 +524,19 @@ justify-content: flex-end;
   margin-top: 1rem;
   color: #333;
 }
-.faq-answer.visible{
+.faq-answer.visible {
   display: block;
 }
 
-.container-img-preg{
+.container-img-preg {
   padding: 5rem 2rem;
   position: relative;
   height: 1110px;
 }
-.sticky-img{
-position: sticky;
-top: 10rem;
+.sticky-img {
+  position: sticky;
+  top: 10rem;
 }
-
 
 /*footer*/
 footer {
@@ -577,34 +580,30 @@ span {
   color: #cecece;
 }
 
-.preguntas-frecuentes-container{
+.preguntas-frecuentes-container {
   background-color: #ffffff;
 }
 
-
-
- @media (max-width: 900px){
-  html{
+@media (max-width: 900px) {
+  html {
     font-size: 14px;
   }
-  .texto-portada{
+  .texto-portada {
     top: 32rem;
     left: 2rem;
   }
-  .portada{
+  .portada {
     height: 70vh;
   }
-  .container{
-    flex-direction: column;
+  .container {
+    flex-direction: column-reverse;
     flex-wrap: wrap;
   }
-  .preguntas-frecuentes-container{
+  .preguntas-frecuentes-container {
     flex-direction: column;
     align-items: center;
   }
-  .container-img-preg{
+  .container-img-preg {
     height: auto;
   }
- }
-
-
+}
