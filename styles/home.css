@@ -599,6 +599,12 @@ span {
     flex-direction: column-reverse;
     flex-wrap: wrap;
   }
+  #horarios-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1rem 3rem 3rem 3rem;
+    background-color: rgb(135, 206, 235, 50%);
+  }
   .preguntas-frecuentes-container {
     flex-direction: column;
     align-items: center;
