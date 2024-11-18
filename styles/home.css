@@ -26,7 +26,9 @@ nav {
   width: 100%;
   box-sizing: border-box;
 }
-
+#li-home2{
+  display: none;
+}
 .nav-ul {
   display: flex;
   align-items: center;
@@ -587,6 +589,12 @@ span {
 @media (max-width: 900px) {
   html {
     font-size: 14px;
+  }
+  #li-home2{
+    display: inline;
+  }
+  #li-home1{
+    display: none;
   }
   .texto-portada {
     top: 32rem;
