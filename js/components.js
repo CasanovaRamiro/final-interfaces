@@ -4,8 +4,8 @@ class Components {
         return `
             <nav>
                 <ul class="nav-ul">
-                    <li class="nav-li" id="li-home1><a href="home.html" class="interno">Memorial Chastain Park</a></li>
-                    <li class="nav-li" id="li-home2"><a href="home.html" class="interno">MCP</a></li>
+                    <li class="nav-li" id="li-home-largo"><a href="home.html" class="interno">Memorial Chastain Park</a></li>
+                    <li class="nav-li" id="li-home-corto"><a href="home.html" class="interno">MCP</a></li>
                     <li class="nav-li"><a href="turnos.html" class="interno">Pedir Turno</a></li>
                     <li class="nav-li"><a href="salaDeEspera.html" class="interno">Teleconsulta</a></li>
                     <li class="nav-li dropdown">
