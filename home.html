@@ -27,7 +27,7 @@
             <p class="texto-turno">CLINICA MÉDICA</p>
             <div class="modificaciones-container">
               <p class="texto-turno modificar"><a href="salaDeEspera.html" class="a-date">Iniciar teleconsulta</a></p>
-              <p class="texto-turno modificar">Modificar turno</p>
+              
               <p class="texto-turno modificar eliminar-turno">Eliminar turno</p>
             </div>
           </div>
@@ -42,7 +42,7 @@
             <p class="texto-turno">Dermatología</p>
             <div class="modificaciones-container">
               <p class="texto-turno modificar"><a href="salaDeEspera.html" class="a-date">Iniciar teleconsulta</a></p>
-              <p class="texto-turno modificar">Modificar turno</p>
+              
               <p class="texto-turno modificar eliminar-turno">Eliminar turno</p>
             </div>
           </div>
@@ -80,6 +80,7 @@
       </article>
 
       <article class="calendario">
+        <p class="textos-explicativos">Elija la fecha de su próximo turno haciendo click en el día deseado</p>
         <div id="calendar" class="calendar"></div>
         <div class="navigation">
           <button id="prevMonth" class="navButton">←</button>
@@ -91,15 +92,27 @@
     </section>
     <section>
     <article class="horarios-medicos" >
-      <h3 id="medicos">Disponibilidad de mis médicos</h3>
+      <h3 id="medicos">Seleccione su turno viendo la disponibilidad de sus médicos</h3>
       <div id="medico-container">
-      <button id="prev" class="navButton btn-medico" onclick="cambiarMedico(-1)">←</button>
-      <div id="medico-info">
-        <img id="foto-medico" src="" alt="Foto del Médico" />
-        <h3 id="nombre-medico"></h3>
-        <p id="especialidad-medico"></p>
-      </div>
-      <button id="next" class="navButton btn-medico" onclick="cambiarMedico(1)">→</button>
+
+        <div class="semana-ant">
+          <p class="texto-a ">Semana anterior</p>
+        </div>
+
+        <div class="elegir-medico">
+          <button id="prev" class="navButton btn-medico" onclick="cambiarMedico(-1)">←</button>
+          <div id="medico-info">
+            <img id="foto-medico" src="" alt="Foto del Médico" />
+            <h3 id="nombre-medico"></h3>
+            <p id="especialidad-medico"></p>
+          </div>
+          <button id="next" class="navButton btn-medico" onclick="cambiarMedico(1)">→</button>
+        </div>
+      
+        <div class="semana-sig">
+          <p class="texto-a">Semana siguiente</p>
+        </div>
+      
     </div>
     <div id="horarios-container"></div>
     </article>
