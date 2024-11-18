@@ -26,7 +26,9 @@ nav {
   width: 100%;
   box-sizing: border-box;
 }
-
+#li-home-corto{
+  display: none;
+}
 .nav-ul {
   display: flex;
   align-items: center;
@@ -585,9 +587,19 @@ span {
   background-color: #ffffff;
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   html {
     font-size: 14px;
+  }
+
+  #li-home-corto{
+    display: inline;
+  }
+  #li-home-largo{
+    display: none;
+  }
+  .foto-perfil{
+    display: none;
   }
   .texto-portada {
     top: 32rem;
@@ -599,6 +611,62 @@ span {
   .container {
     flex-direction: column-reverse;
     flex-wrap: wrap;
+  }
+  #horarios-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1rem 3rem 3rem 3rem;
+    background-color: rgb(135, 206, 235, 50%);
+  }
+  .preguntas-frecuentes-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-img-preg {
+    height: auto;
+  }
+}
+@media screen and (max-width: 1040px) and (min-width:901px) {
+  html {
+    font-size: 14px;
+  }
+
+  #li-home-corto{
+    display: inline;
+  }
+  #li-home-largo{
+    display: none;
+  }
+  .foto-perfil{
+    display: none;
+  }
+  .texto-portada {
+    top: 32rem;
+    left: 2rem;
+  }
+  .portada {
+    height: 70vh;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "calendario calendario" "cercanos anteriores ";
+  }
+  .calendario{
+grid-area: calendario;
+  }
+  .turnos-anteriores{
+    grid-area: anteriores;
+  }
+  .turnos-cercanos{
+    grid-area: cercanos;
+  }
+  #horarios-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1rem 3rem 3rem 3rem;
+    background-color: rgb(135, 206, 235, 50%);
   }
   .preguntas-frecuentes-container {
     flex-direction: column;
