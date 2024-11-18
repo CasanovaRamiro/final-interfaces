@@ -55,6 +55,7 @@ nav {
 .foto-perfil {
   width: 2rem;
   border-radius: 50%;
+  height: auto;
 }
 .container-usuario {
   display: flex;
