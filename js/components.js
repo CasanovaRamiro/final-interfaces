@@ -6,7 +6,7 @@ class Components {
                 <ul class="nav-ul">
                     <li class="nav-li"><a href="home.html" class="interno">Memorial Chastain Park</a></li>
                     <li class="nav-li"><a href="turnos.html" class="interno">Pedir Turno</a></li>
-                    <li class="nav-li"><a href="salaDeEspera.html" class="interno">Teleconsulta</a></li>
+                    <li class="nav-li"><a href="salaDeEspera.html" class="interno">Demanda espontánea</a></li>
                     <li class="nav-li dropdown">
                         <div class="container-usuario">
                             <img class="foto-perfil" src="./img/default-user.png" alt="foto de usuario">
