@@ -9,7 +9,7 @@ class Components {
                     <li class="nav-li"><a href="salaDeEspera.html" class="interno">Teleconsulta</a></li>
                     <li class="nav-li dropdown">
                         <div class="container-usuario">
-                            <img class="foto-perfil" src="/img/default-user.png" alt="foto de usuario">
+                            <img class="foto-perfil" src="img/default-user.png" alt="foto de usuario">
                             <p id="perfil" class="nav-li">Perfil</p>
                         </div>
                             <ul class="dropdown-content">
