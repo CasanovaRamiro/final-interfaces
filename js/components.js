@@ -337,6 +337,15 @@ class Components {
     static filterControls() {
         return `
             <div class="filter-controls">
+                <label>Buscar desde</label>
+                <input type="date" class="filter-select">
+                <label> hasta </label>
+                <input type="date" class="filter-select">
+                <select id="" class="filter-select">
+                    <option value="">Todos los tipos de consulta</option>
+                    <option value="Teleconsulta">Teleconsulta</option>
+                    <option value="Presencial">Presencial</option>
+                </select>
                 <select id="doctorFilter" class="filter-select">
                     <option value="">Todos los médicos</option>
                     <option value="Lorena Delrio">Lorena Delrio</option>
