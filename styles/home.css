@@ -603,7 +603,7 @@ span {
   background-color: #ffffff;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) and (min-width:401px) {
   html {
     font-size: 14px;
   }
@@ -689,6 +689,50 @@ grid-area: calendario;
     background-color: rgb(135, 206, 235, 50%);
   }
 
+  .sticky-img{
+    width: 20rem;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 10px;
+  }
+
+  #li-home-corto{
+    display: inline;
+  }
+  #li-home-largo{
+    display: none;
+  }
+  .foto-perfil{
+    display: none;
+  }
+  .texto-portada {
+    top: 32rem;
+    left: 2rem;
+  }
+  .portada {
+    height: 70vh;
+  }
+  .container {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+  #horarios-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1rem 3rem 3rem 3rem;
+    background-color: rgb(135, 206, 235, 50%);
+  }
+  .preguntas-frecuentes-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-img-preg {
+    height: auto;
+  }
   .sticky-img{
     width: 20rem;
     height: auto;
