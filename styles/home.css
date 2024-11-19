@@ -416,11 +416,16 @@ nav ul li .interno:hover {
 }
 
 /*Horarios de los medicos*/
+.horarios-medicos{
+  display: flex;
+  flex-direction: column;
+}
+
+
 #medico-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-color: rgb(135, 206, 235, 50%);
-  justify-content: space-around;
 }
 .elegir-medico{
   display: flex;
@@ -428,11 +433,22 @@ nav ul li .interno:hover {
   justify-content: center;
   gap: 2rem;
 }
+
+.semanas{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}
+
 .semana-ant{
 align-self: flex-end;
 }
 .semana-sig{
   align-self: flex-end;
+}
+.mes{
+  font-size: larger;
+  font-weight: bold;
 }
 #medicos {
   background-color: rgb(135, 206, 235, 50%);

@@ -9,12 +9,12 @@
   <body>
     <div id="navbar-placeholder"></div>
 
-
-<div class="portada">
-<h1 class="texto-portada">Comprometidos con tu salud, dedicados a tu bienestar.</h1>
-  <img class="portada-img" src="img/pasillo.jpg" alt="Portada del sitio">
-</div>
-
+    <div class="portada">
+      <h1 class="texto-portada">
+        Comprometidos con tu salud, dedicados a tu bienestar.
+      </h1>
+      <img class="portada-img" src="img/pasillo.jpg" alt="Portada del sitio" />
+    </div>
 
     <section class="container">
       <article class="turnos turnos-cercanos">
@@ -26,8 +26,12 @@
             <p class="texto-turno">Soledad Ramirez</p>
             <p class="texto-turno">CLINICA MÉDICA</p>
             <div class="modificaciones-container">
-              <p class="texto-turno modificar"><a href="salaDeEspera.html" class="a-date">Iniciar teleconsulta</a></p>
-              
+              <p class="texto-turno modificar">
+                <a href="salaDeEspera.html" class="a-date"
+                  >Iniciar teleconsulta</a
+                >
+              </p>
+
               <p class="texto-turno modificar eliminar-turno">Eliminar turno</p>
             </div>
           </div>
@@ -41,146 +45,194 @@
             <p class="texto-turno">Roberto Sánchez</p>
             <p class="texto-turno">Dermatología</p>
             <div class="modificaciones-container">
-              <p class="texto-turno modificar"><a href="salaDeEspera.html" class="a-date">Iniciar teleconsulta</a></p>
-              
+              <p class="texto-turno modificar">
+                <a href="salaDeEspera.html" class="a-date"
+                  >Iniciar teleconsulta</a
+                >
+              </p>
+
               <p class="texto-turno modificar eliminar-turno">Eliminar turno</p>
             </div>
           </div>
         </div>
       </article>
-      
-      
-      <article class="turnos turnos-anteriores"><a href="historial.html" class="a-date">
-        <h3>Historial de turnos</h3>
-               
-        <div class="turno-anterior">
-          <img src="img/medico 5.jpg" alt="Edgardo López" />
-          <div class="texto-container">
-            <p class="texto-turno">Martes 05 de Noviembre de 2024 11:00 hs</p>
-            <p class="texto-turno">Gonzalo Gimenez</p>
-            <p class="texto-turno">Traumatología</p>
+
+      <article class="turnos turnos-anteriores">
+        <a href="historial.html" class="a-date">
+          <h3>Historial de turnos</h3>
+
+          <div class="turno-anterior">
+            <img src="img/medico 5.jpg" alt="Edgardo López" />
+            <div class="texto-container">
+              <p class="texto-turno">Martes 05 de Noviembre de 2024 11:00 hs</p>
+              <p class="texto-turno">Gonzalo Gimenez</p>
+              <p class="texto-turno">Traumatología</p>
+            </div>
           </div>
-        </div>
-        <div class="turno-anterior">
-          <img src="img/medico 7.jfif" alt="Gonzalo Gimenez" />
-          <div class="texto-container">
-            <p class="texto-turno">Lunes 10 de Junio de 2024 15:00 hs</p>
-            <p class="texto-turno">Gonzalo Gimenez</p>
-            <p class="texto-turno">Endrcrinología</p>
+          <div class="turno-anterior">
+            <img src="img/medico 7.jfif" alt="Gonzalo Gimenez" />
+            <div class="texto-container">
+              <p class="texto-turno">Lunes 10 de Junio de 2024 15:00 hs</p>
+              <p class="texto-turno">Gonzalo Gimenez</p>
+              <p class="texto-turno">Endrcrinología</p>
+            </div>
           </div>
-        </div>
-        <div class="turno-anterior">
-          <img src="img/medico 3.jfif" alt="Leandro Delrio" />
-          <div class="texto-container">
-            <p class="texto-turno">Lunes 06 de Mayo de 2024 18:40 hs</p>
-            <p class="texto-turno">Leandro Delrio</p>
-            <p class="texto-turno">Cardiología</p>
-          </div>
-        </div></a>
+          <div class="turno-anterior">
+            <img src="img/medico 3.jfif" alt="Leandro Delrio" />
+            <div class="texto-container">
+              <p class="texto-turno">Lunes 06 de Mayo de 2024 18:40 hs</p>
+              <p class="texto-turno">Leandro Delrio</p>
+              <p class="texto-turno">Cardiología</p>
+            </div>
+          </div></a
+        >
       </article>
 
       <article class="calendario">
-        <p class="textos-explicativos">Elija la fecha de su próximo turno haciendo click en el día deseado</p>
+        <p class="textos-explicativos">
+          Elija la fecha de su próximo turno haciendo click en el día deseado
+        </p>
         <div id="calendar" class="calendar"></div>
         <div class="navigation">
           <button id="prevMonth" class="navButton">←</button>
           <button id="nextMonth" class="navButton">→</button>
         </div>
       </article>
-
-      
     </section>
     <section>
-    <article class="horarios-medicos" >
-      <h3 id="medicos">Seleccione su turno viendo la disponibilidad de sus médicos</h3>
-      <div id="medico-container">
-
-        <div class="semana-ant">
-          <p class="texto-a ">Semana anterior</p>
-        </div>
-
-        <div class="elegir-medico">
-          <button id="prev" class="navButton btn-medico" onclick="cambiarMedico(-1)">←</button>
-          <div id="medico-info">
-            <img id="foto-medico" src="" alt="Foto del Médico" />
-            <h3 id="nombre-medico"></h3>
-            <p id="especialidad-medico"></p>
+      <article class="horarios-medicos">
+        <h3 id="medicos">
+          Seleccione su turno viendo la disponibilidad de sus médicos
+        </h3>
+        <div id="medico-container">
+          <div class="elegir-medico">
+            <button
+              id="prev"
+              class="navButton btn-medico"
+              onclick="cambiarMedico(-1)"
+            >
+              ←
+            </button>
+            <div id="medico-info">
+              <img id="foto-medico" src="" alt="Foto del Médico" />
+              <h3 id="nombre-medico"></h3>
+              <p id="especialidad-medico"></p>
+            </div>
+            <button
+              id="next"
+              class="navButton btn-medico"
+              onclick="cambiarMedico(1)"
+            >
+              →
+            </button>
           </div>
-          <button id="next" class="navButton btn-medico" onclick="cambiarMedico(1)">→</button>
+
+          <div class="semanas">
+            <p class="texto-a semana-ant">Semana anterior</p>
+            <p class="mes">Noviembre 2024</p>
+            <p class="texto-a semana-sig">Semana siguiente</p>
+          </div>
         </div>
-      
-        <div class="semana-sig">
-          <p class="texto-a">Semana siguiente</p>
+
+        <div id="horarios-container"></div>
+      </article>
+    </section>
+
+    <section class="preguntas-frecuentes-container">
+      <div class="faq-container">
+        <h2 id="titulo-preguntas">Preguntas Frecuentes</h2>
+
+        <div class="faq-item">
+          <p class="faq-question">¿Cómo puedo solicitar un turno?</p>
+          <p class="faq-answer">
+            Para solicitar un turno, ingrese a la sección de turnos y seleccione
+            su especialidad y profesional de preferencia.
+          </p>
         </div>
-      
-    </div>
-    <div id="horarios-container"></div>
-    </article>
-  </section>
 
-  <section class="preguntas-frecuentes-container">
-    
-<div class="faq-container">
-  <h2 id="titulo-preguntas">Preguntas Frecuentes</h2>
+        <div class="faq-item">
+          <p class="faq-question">¿Es posible cancelar una teleconsulta?</p>
+          <p class="faq-answer">
+            Sí, puede cancelar su teleconsulta desde su perfil hasta 24 horas
+            antes de la cita.
+          </p>
+        </div>
 
-  <div class="faq-item">
-      <p class="faq-question">¿Cómo puedo solicitar un turno?</p>
-      <p class="faq-answer">Para solicitar un turno, ingrese a la sección de turnos y seleccione su especialidad y profesional de preferencia.</p>
-  </div>
-  
-  <div class="faq-item">
-      <p class="faq-question">¿Es posible cancelar una teleconsulta?</p>
-      <p class="faq-answer">Sí, puede cancelar su teleconsulta desde su perfil hasta 24 horas antes de la cita.</p>
-  </div>
+        <div class="faq-item">
+          <p class="faq-question">¿Puedo reprogramar un turno sin costo?</p>
+          <p class="faq-answer">
+            Puede reprogramar sin costo alguno en cualquier momento.
+          </p>
+        </div>
 
-  <div class="faq-item">
-      <p class="faq-question">¿Puedo reprogramar un turno sin costo?</p>
-      <p class="faq-answer">Puede reprogramar sin costo alguno en cualquier momento.</p>
-  </div>
+        <div class="faq-item">
+          <p class="faq-question">¿Cómo sé si mi turno ha sido confirmado?</p>
+          <p class="faq-answer">
+            Recibirá un correo electrónico de confirmación una vez que su turno
+            haya sido confirmado, y podrá verlo en su perfil.
+          </p>
+        </div>
 
-  <div class="faq-item">
-      <p class="faq-question">¿Cómo sé si mi turno ha sido confirmado?</p>
-      <p class="faq-answer">Recibirá un correo electrónico de confirmación una vez que su turno haya sido confirmado, y podrá verlo en su perfil.</p>
-  </div>
+        <div class="faq-item">
+          <p class="faq-question">
+            ¿Qué debo hacer si tengo problemas para acceder a mi teleconsulta?
+          </p>
+          <p class="faq-answer">
+            Si tiene problemas para acceder, comuníquese con nuestro soporte
+            técnico a través del chat en línea.
+          </p>
+        </div>
 
-  <div class="faq-item">
-      <p class="faq-question">¿Qué debo hacer si tengo problemas para acceder a mi teleconsulta?</p>
-      <p class="faq-answer">Si tiene problemas para acceder, comuníquese con nuestro soporte técnico a través del chat en línea.</p>
-  </div>
+        <div class="faq-item">
+          <p class="faq-question">¿Qué pasa si pierdo mi turno?</p>
+          <p class="faq-answer">
+            Si pierde su turno, deberá volver a programarlo, no se aplicará
+            ningún cargo adicional.
+          </p>
+        </div>
 
-  <div class="faq-item">
-      <p class="faq-question">¿Qué pasa si pierdo mi turno?</p>
-      <p class="faq-answer">Si pierde su turno, deberá volver a programarlo, no se aplicará ningún cargo adicional.</p>
-  </div>
+        <div class="faq-item">
+          <p class="faq-question">¿Cuánto tiempo duran las teleconsultas?</p>
+          <p class="faq-answer">
+            Las teleconsultas suelen durar entre 20 y 30 minutos, dependiendo
+            del caso.
+          </p>
+        </div>
 
-  <div class="faq-item">
-      <p class="faq-question">¿Cuánto tiempo duran las teleconsultas?</p>
-      <p class="faq-answer">Las teleconsultas suelen durar entre 20 y 30 minutos, dependiendo del caso.</p>
-  </div>
+        <div class="faq-item">
+          <p class="faq-question">¿Cómo puedo ver mis turnos anteriores?</p>
+          <p class="faq-answer">
+            Puede ver sus turnos anteriores en su perfil, en la sección de
+            "Historial de Turnos".
+          </p>
+        </div>
 
-  <div class="faq-item">
-      <p class="faq-question">¿Cómo puedo ver mis turnos anteriores?</p>
-      <p class="faq-answer">Puede ver sus turnos anteriores en su perfil, en la sección de "Historial de Turnos".</p>
-  </div>
+        <div class="faq-item">
+          <p class="faq-question">¿Puedo hacer una teleconsulta sin cámara?</p>
+          <p class="faq-answer">
+            La cámara es recomendada para una mejor experiencia, pero puede
+            hacer la teleconsulta solo con audio.
+          </p>
+        </div>
 
-  <div class="faq-item">
-      <p class="faq-question">¿Puedo hacer una teleconsulta sin cámara?</p>
-      <p class="faq-answer">La cámara es recomendada para una mejor experiencia, pero puede hacer la teleconsulta solo con audio.</p>
-  </div>
-
-  <div class="faq-item">
-      <p class="faq-question">¿Qué documentos necesito para la teleconsulta?</p>
-      <p class="faq-answer">Es recomendable tener a mano sus antecedentes médicos y cualquier documento relevante para la consulta.</p>
-  </div>
-</div>
-<div class="container-img-preg">
-    <img class="sticky-img" src="img/medico-online.avif" alt="Ilustracion de una doctora">
-  </div>
-  </section>
-
-
-
-
+        <div class="faq-item">
+          <p class="faq-question">
+            ¿Qué documentos necesito para la teleconsulta?
+          </p>
+          <p class="faq-answer">
+            Es recomendable tener a mano sus antecedentes médicos y cualquier
+            documento relevante para la consulta.
+          </p>
+        </div>
+      </div>
+      <div class="container-img-preg">
+        <img
+          class="sticky-img"
+          src="img/medico-online.avif"
+          alt="Ilustracion de una doctora"
+        />
+      </div>
+    </section>
 
     <div class="chat-widget minimized" id="chatWidget">
       <div class="chat-header" onclick="toggleChat()">
