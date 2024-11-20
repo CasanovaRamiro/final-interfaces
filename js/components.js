@@ -4,9 +4,10 @@ class Components {
         return `
             <nav>
                 <ul class="nav-ul">
-                    <li class="nav-li"><a href="home.html" class="interno">Memorial Chastain Park</a></li>
+                    <li class="nav-li container-logo" id="li-home-largo"><img class="foto-logo" src="img/logo.png" alt="logo"><a href="home.html" class="interno">Memorial Chastain Park</a></li>
+                    <li class="nav-li" id="li-home-corto"><a href="home.html" class="interno">MCP</a></li>
                     <li class="nav-li"><a href="turnos.html" class="interno">Pedir Turno</a></li>
-                    <li class="nav-li"><a href="salaDeEspera.html" class="interno">Teleconsulta</a></li>
+                    <li class="nav-li"><a href="salaDeEspera.html" class="interno">Demanda espontánea</a></li>
                     <li class="nav-li dropdown">
                         <div class="container-usuario">
                             <img class="foto-perfil" src="./img/default-user.png" alt="foto de usuario">
@@ -14,7 +15,8 @@ class Components {
                         </div>
                             <ul class="dropdown-content">
                                 <li><a href="perfil.html" class="interno">Mi perfil</a></li>
-                                <li><a href="historial.html" class="interno">Historial</a></li>
+                                <li><a href="historial.html" class="interno">Turnos</a></li>
+                                <li><a href="historialTeleconsultas.html" class="interno">Historial</a></li>
                                 <li><a href="index.html" class="interno">Cerrar sesión</a></li>
                             </ul>
                         
@@ -332,6 +334,93 @@ class Components {
         });
     }
 
+    static filterControls() {
+        return `
+            <div class="filter-controls">
+                <label>Buscar desde</label>
+                <input type="date" class="filter-select">
+                <label> hasta </label>
+                <input type="date" class="filter-select">
+                <select id="" class="filter-select">
+                    <option value="">Todos los tipos de consulta</option>
+                    <option value="Teleconsulta">Teleconsulta</option>
+                    <option value="Presencial">Presencial</option>
+                </select>
+                <select id="doctorFilter" class="filter-select">
+                    <option value="">Todos los médicos</option>
+                    <option value="Lorena Delrio">Lorena Delrio</option>
+                    <option value="Gonzalo Gimenez">Gonzalo Gimenez</option>
+                    <option value="Oscar Bona">Oscar Bona</option>
+                    <option value="Leandro Delrio">Leandro Delrio</option>
+                    <option value="Eldo Ctorsito">Eldo Ctorsito</option>
+                    <option value="Marina Suarez">Marina Suarez</option>
+                    <option value="Roberto Perez">Roberto Perez</option>
+                    <option value="Carolina Martinez">Carolina Martinez</option>
+                </select>
+                <select id="specialtyFilter" class="filter-select">
+                    <option value="">Todas las especialidades</option>
+                    <option value="Cardiología">Cardiología</option>
+                    <option value="Traumatología">Traumatología</option>
+                    <option value="Endocrinología">Endocrinología</option>
+                    <option value="Pediatría">Pediatría</option>
+                    <option value="Dermatología">Dermatología</option>
+                </select>
+                <button id="resetFilters" class="reset-button">Resetear filtros</button>
+            </div>
+        `;
+    }
+
+    static initFilters() {
+        const appointments = document.querySelectorAll('.turno-anterior');
+        const doctorFilter = document.getElementById('doctorFilter');
+        const specialtyFilter = document.getElementById('specialtyFilter');
+        const resetButton = document.getElementById('resetFilters');
+
+        function filterAppointments() {
+            const selectedDoctor = doctorFilter.value;
+            const selectedSpecialty = specialtyFilter.value;
+
+            appointments.forEach(appointment => {
+                const doctorName = appointment.querySelector('.texto-container p:nth-child(2)').textContent;
+                const specialty = appointment.querySelector('.texto-container p:nth-child(3)').textContent;
+
+                const matchesDoctor = !selectedDoctor || doctorName === selectedDoctor;
+                const matchesSpecialty = !selectedSpecialty || specialty === selectedSpecialty;
+
+                if (matchesDoctor && matchesSpecialty) {
+                    appointment.style.display = 'flex';
+                } else {
+                    appointment.style.display = 'none';
+                }
+            });
+        }
+
+        // Event listener for doctor filter
+        doctorFilter.addEventListener('change', (e) => {
+            if (e.target.value !== '') {
+                specialtyFilter.value = ''; // Clear specialty filter
+            }
+            filterAppointments();
+        });
+
+        // Event listener for specialty filter
+        specialtyFilter.addEventListener('change', (e) => {
+            if (e.target.value !== '') {
+                doctorFilter.value = ''; // Clear doctor filter
+            }
+            filterAppointments();
+        });
+
+        // Reset filters button
+        resetButton.addEventListener('click', () => {
+            doctorFilter.value = '';
+            specialtyFilter.value = '';
+            appointments.forEach(appointment => {
+                appointment.style.display = 'flex';
+            });
+        });
+    }
+
     static init() {
         // Insert navbar
         const navbarPlaceholder = document.querySelector('#navbar-placeholder');
@@ -357,6 +446,13 @@ class Components {
         if (videoCallPlaceholder) {
             videoCallPlaceholder.innerHTML = this.videoCall();
             this.initVideoCall();
+        }
+
+        // Insert filters
+        const filterPlaceholder = document.querySelector('#filter-placeholder');
+        if (filterPlaceholder) {
+            filterPlaceholder.innerHTML = this.filterControls();
+            this.initFilters(); // Initialize filters functionality after inserting HTML
         }
     }
 }

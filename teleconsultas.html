@@ -17,9 +17,29 @@
         gap: 15px;
         padding-top: 3rem;
         padding-bottom: 2rem;
+        flex-wrap: wrap;
       }
       #chat {
         width: 350px;
+      }
+
+      @media screen and (max-width: 1250px) {
+        #videocall-placeholder {
+          width: 100%;
+          display: flex;
+          align-items: center;
+            justify-content: center;
+        }
+
+        #chat {
+          width: 100%;
+          max-width: 800px;
+        }
+
+        #view {
+          padding: 0.5rem;
+          gap: 20px;
+        }
       }
     </style>
   </head>

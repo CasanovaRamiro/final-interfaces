@@ -49,11 +49,25 @@
     </div>
 
     <div class="historial-buttons">
-      <a href="historial.html"><button class="historial-btn">Historial de Turnos</button></a>
-      <a href="historial.html"><button class="historial-btn">Historial de Teleconsultas</button></a>
+      <a href="historial.html"><button class="historial-btn">Mis turnos</button></a>
+      <a href="historialTeleconsultas.html"><button class="historial-btn">Historial de Teleconsultas</button></a>
     </div>
   </article>
 </section>
+<div class="chat-widget minimized" id="chatWidget">
+  <div class="chat-header" onclick="toggleChat()">
+    <p>Soporte en línea</p>
+    <button class="close-chat" onclick="closeChat(event)">×</button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <p>Bienvenido al chat de soporte.</p>
+  </div>
+  <div class="chat-footer">
+    <input type="text" id="chatInput" placeholder="Escribe tu mensaje..." />
+    <button class="send-button" onclick="sendMessage()">Enviar</button>
+  </div>
+</div>
+
 <div id="footer-placeholder"></div>
 
 <script src="js/components.js"></script>
