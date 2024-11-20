@@ -30,6 +30,7 @@ function goStep1(){
   function goStep2(){
     const step = document.getElementById('step-container');
     var step2 = document.createElement('div');
+    var oldOptions = document.getElementById('');
     step2.innerHTML = `<div class="flex flex-col">
       <form action="./home.html" class="">
         <div class="flex gap-x-6 mb-6">
