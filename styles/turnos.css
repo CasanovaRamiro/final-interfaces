@@ -33,12 +33,6 @@
     color: white;
 }
 
-#step-1:hover{
-    background-color: #66cc99;
-  }
-  #step-2:hover{
-    background-color: #66cc99;
-  }
-  #step-3:hover{
+.hover-effect:hover{
     background-color: #66cc99;
   }

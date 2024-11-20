@@ -1,3 +1,75 @@
+const step = document.getElementById('step-container');
+const sedes = ['Sede Caballito', 'Hospital Central', 'Anexo Microcentro', 'Htal Escuela North Zone', 'Htal Gral South Zone', 'Htal Gral Far West Zone']
+const medicosCardiologia = [
+  'Torres, María Micaela', 
+  'Gimenez, Horacio Anibal', 
+  'Uschauk, Gimena', 
+  'Wittgenstein, Emilio'
+];
+
+const medicosPediatria = [
+  'Fernandez, Lucia Valentina', 
+  'Gomez, Santiago Andres', 
+  'Lopez, Martina Rocio', 
+  'Mendoza, Tomas Ignacio'
+];
+
+const medicosTraumatologia = [
+  'Ramirez, Jorge Luis', 
+  'Diaz, Camila Gabriela', 
+  'Herrera, Juan Manuel', 
+  'Castro, Melisa Agustina'
+];
+
+const medicosDermatologia = [
+  'Martinez, Clara Alejandra', 
+  'Perez, Ignacio Matias', 
+  'Sanchez, Juliana Florencia', 
+  'Alvarez, Esteban Javier'
+];
+
+const medicosGinecologia = [
+  'Rodriguez, Ana Sofia', 
+  'Gutierrez, Francisco Martin', 
+  'Ortiz, Valeria Cecilia', 
+  'Medina, Damian Leonardo'
+];
+
+const medicosNeurologia = [
+  'Mendez, Pablo Emilio', 
+  'Ruiz, Daniela Beatriz', 
+  'Morales, Gabriela Lourdes', 
+  'Vega, Fabian Adrian'
+];
+
+const medicosOftalmologia = [
+  'Silva, Carla Julieta', 
+  'Cabrera, Diego Esteban', 
+  'Navarro, Laura Patricia', 
+  'Ortiz, Matias Federico'
+];
+
+const medicosOncologia = [
+  'Castillo, Lucas Emanuel', 
+  'Rios, Noelia Veronica', 
+  'Luna, Santiago Nicolas', 
+  'Farias, Mariana Andrea'
+];
+
+const medicosPsiquiatria = [
+  'Vargas, Ricardo Daniel', 
+  'Correa, Paula Mariana', 
+  'Cruz, Victoria Alejandra', 
+  'Espinoza, Roberto Gaston'
+];
+
+const medicosFlebologia = [
+  'Perez, Javier Sebastian', 
+  'Lopez, Monica Alejandra', 
+  'Rojas, Federico Leonardo', 
+  'Suarez, Antonella Giselle'
+];
+
 document.addEventListener("DOMContentLoaded", function () {
     const steps = document.querySelectorAll(".step");
     
@@ -20,8 +92,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+step.addEventListener("click", (event) => {
+  var especialidad = event.target.childNodes[0].data;
+  localStorage.setItem("especialidad", especialidad);
+});
+
 function goStep1(){
-    const step = document.getElementById('step-container');
     var step1 = document.createElement('div');
     step1.innerHTML = ``;
     step.appendChild(step1);
@@ -29,9 +105,27 @@ function goStep1(){
 
   function goStep2(){
     const step = document.getElementById('step-container');
+    const step2Circle = document.getElementById('step-2');
+    
     var step2 = document.createElement('div');
-    var oldOptions = document.getElementById('');
-    step2.innerHTML = `<div class="flex flex-col">
+    let especialidad = document.getElementById('esp');
+    especialidad.classList.replace("text-blue-900", "text-gray-600");
+    // especialidad.classList.add('hover-effect');
+
+    let step1Circle = document.getElementById('step-1');
+    step1Circle.style.backgroundColor = 'gray';
+
+    let instalaciones = document.getElementById('inst');
+    instalaciones.classList.replace("text-gray-600", "text-blue-900");
+    step2Circle.classList.add("hover-effect");
+    
+    step2Circle.style.backgroundColor = '#003366';
+    
+    
+    let containerChildren = Array.from(step.children);
+    containerChildren.forEach(child => child.remove());
+
+    let formu = `<div class="flex flex-col">
       <form action="./home.html" class="">
         <div class="flex gap-x-6 mb-6">
           <div class="w-full relative">
@@ -113,14 +207,92 @@ function goStep1(){
           class="w-52 h-12 shadow-sm rounded-full bg-green-600 hover:bg-gray-800 transition-all duration-700 text-white text-base font-semibold leading-7">Next</button>
       </form>
     </div>`;
+    
+
+    for(let sede of sedes){
+      step2.innerHTML += 
+      `<a class="areas block p-4" href="javascript:void(0)" onclick="goStep3()">
+        <div class="especialidad text-center">
+          <i class="fas fa-building text-black-500 text-4xl mr-2"></i>
+          <h2 class="text-lg font-semibold">`+`${sede}`+`</h2>
+        </div>
+      </a>`;
+    }
+
     step.appendChild(step2);
-    var areas = document.getElementsByClassName('areas');
-    array.forEach( (a, index, areas) => {
-        document.removeChild(areas[index])
-    });
   }
 
 function goStep3(){
+  let especialidadElegida = localStorage.getItem("especialidad");
+  const step = document.getElementById('step-container');
+    const step3Circle = document.getElementById('step-3');
+    
+    var step3 = document.createElement('div');
+    let instalaciones = document.getElementById('inst');
+    instalaciones.classList.replace("text-blue-900", "text-gray-600");
+    // especialidad.classList.add('hover-effect');
+
+    let step2Circle = document.getElementById('step-2');
+    step2Circle.style.backgroundColor = 'gray';
+
+    let profesionales = document.getElementById('prof');
+    profesionales.classList.replace("text-gray-600", "text-blue-900");
+    // step2Circle.classList.add("hover-effect");
+    
+    step3Circle.style.backgroundColor = '#003366';
+    
+    
+    let containerChildren = Array.from(step.children);
+    containerChildren.forEach(child => child.remove());
+    let medicosSegunEsp = [];
+    switch (especialidadElegida) {
+      case 'Cardiología':
+        medicosSegunEsp = medicosCardiologia;
+        break;
+        case 'Traumatología':
+          medicosSegunEsp = medicosTraumatologia;
+          break;
+        case 'Dermatología':
+        medicosSegunEsp = medicosDermatologia;
+          break;
+        case 'Flebología':
+          medicosSegunEsp = medicosFlebologia;
+          break;
+        case 'Ginecología':
+        medicosSegunEsp = medicosGinecologia;
+          break;
+        case 'Neurología':
+        medicosSegunEsp = medicosNeurologia;
+          break;
+        case 'Oftalmología':
+        medicosSegunEsp = medicosOftalmologia;
+          break;
+        case 'Oncología':
+        medicosSegunEsp = medicosOncologia;
+          break;
+        case 'Pediatría':
+        medicosSegunEsp = medicosPediatria;
+          break;
+        case 'Psiquiatría':
+        medicosSegunEsp = medicosPsiquiatria;
+          break;
+      default:
+        break;
+    }
+
+    for(let medico of medicosSegunEsp){
+      step3.innerHTML += 
+      `<a class="areas block p-4" href="javascript:void(0)" onclick="goStep4()">
+        <div class="especialidad text-center">
+          <i class="fas fa-user-md text-black-500 text-4xl mr-2"></i>
+          <h2 class="text-lg font-semibold">`+`${medico}`+`</h2>
+        </div>
+      </a>`;
+    }
+    step.appendChild(step3);
+}
+
+function goStep4(){
 
 }
   
