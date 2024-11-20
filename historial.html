@@ -43,6 +43,7 @@
         color: white;
         background-color: #003366;
       }
+      
     </style>
   </head>
   <body>
@@ -102,6 +103,21 @@
       </article>
     </div>
   </section>
+
+  <div class="chat-widget minimized" id="chatWidget">
+    <div class="chat-header" onclick="toggleChat()">
+      <p>Soporte en línea</p>
+      <button class="close-chat" onclick="closeChat(event)">×</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <p>Bienvenido al chat de soporte.</p>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="chatInput" placeholder="Escribe tu mensaje..." />
+      <button class="send-button" onclick="sendMessage()">Enviar</button>
+    </div>
+  </div>
+
   <div id="footer-placeholder"></div>
 
   <script src="js/components.js"></script>
