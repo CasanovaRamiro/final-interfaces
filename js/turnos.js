@@ -3,6 +3,11 @@ const sedes = ['Teleconsulta','Sede Caballito', 'Hospital Central', 'Anexo Micro
 // Fechas habilitadas
 const fechasDisponibles = ["2024-11-24","2024-11-25", "2024-11-27","2024-11-29","2024-11-30","2024-12-02","2024-12-03", "2024-12-04", "2024-12-06", "2024-12-10", "2024-12-11", "2024-12-14"];
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 const medicosCardiologia = [
   'Torres, María Micaela', 
@@ -297,16 +302,19 @@ function goStep4(event){
       let button1 = document.createElement('button');
         button1.textContent = "Confirmar";
         button1.className = "bg-green-500 text-white py-2 px-4 m-2 rounded";
-        button1.addEventListener('click', function() {
-          alert("Confirmación realizada exitosamente");
+        button1.addEventListener('click', () =>{
           console.log("turno confirmado.");
-          window.location.href = "../final-interfaces/home.html"; // Cambia a tu URL
+          
+          setTimeout(() => {
+            window.location.href = "../final-interfaces/home.html";
+        }, 2000);// Cambia a tu URL
         });
         let button2 = document.createElement('button');
         button2.textContent = "Cancelar";
         button2.className = "bg-red-500 text-white py-2 px-4 m-2 rounded";
         button2.onclick = function () {
-          window.location.href = "../final-interfaces/home.html"; // Cambia a tu URL
+          alert("Cancelación exitosa");
+          window.location.href = "../final-interfaces/turnos.html"; // Cambia a tu URL
         };
       buttonsDiv.append(button1);
       buttonsDiv.append(button2);
@@ -427,9 +435,9 @@ function goStep3(event){
       altFormat: "F j, Y",
       enableTime: true,
       dateFormat: "Y-m-d H:i",
-      minTime: "09:00",
+      minTime: `${getRandomInt(12,20)}:00`,
       maxTime: "21:30", // Formato de la fecha
-      enable: ["2024-11-25", "2024-11-27"], // Fechas habilitadas
+      enable: ["2024-11-25", "2024-11-27", "2024-12-06", "2024-12-10", "2024-12-14", "2024-12-16", "2024-12-20"], // Fechas habilitadas
     });
     step3.appendChild(enlace);
     }
