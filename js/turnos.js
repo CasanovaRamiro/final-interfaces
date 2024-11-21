@@ -1,7 +1,7 @@
 const step = document.getElementById('step-container');
-const sedes = ['Sede Caballito', 'Hospital Central', 'Anexo Microcentro', 'Htal Escuela North Zone', 'Htal Gral South Zone', 'Htal Gral Far West Zone']
+const sedes = ['Teleconsulta','Sede Caballito', 'Hospital Central', 'Anexo Microcentro', 'Htal Escuela North Zone', 'Htal Gral South Zone', 'Htal Gral Far West Zone']
 // Fechas habilitadas
-const fechasDisponibles = ["2024-11-25", "2024-11-27", "2024-12-01"];
+const fechasDisponibles = ["2024-11-24","2024-11-25", "2024-11-27","2024-11-29","2024-11-30","2024-12-02","2024-12-03", "2024-12-04", "2024-12-06", "2024-12-10", "2024-12-11", "2024-12-14"];
 
 
 const medicosCardiologia = [
