@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="styles/turnos.css" />
   <link href="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/css/pagedone.css " rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <title>Pedir turno</title>
 </head>
 
@@ -43,227 +44,229 @@
       </li>
       <li id="conf" class="flex md:w-full items-center text-gray-600 ">
         <div class="flex items-center  ">
-          <span id="step-3" onclick="goStep3()"
+          <span id="step-4" onclick="goStep4()"
             class="w-6 h-6 border border-gray-200 rounded-full flex justify-center items-center mr-3 lg:w-10 lg:h-10">4</span>
           Confirmación
         </div>
       </li>
     </ol>
-    <div>
+    <div id="container-of-containers">
       <div id="step-container" class="max-w-l mx-auto h-96 overflow-auto border border-gray-300 rounded-md shadow-md">
         <!-- Especialidades -->
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-heartbeat text-red-500 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Cardiología</h2>
           </div>
         </a>
       
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-baby text-pink-500 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Obstetricia</h2>
           </div>
         </a>
       
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-venus text-purple-500 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Ginecología</h2>
           </div>
         </a>
       
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-bone text-gray-700 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Traumatología</h2>
           </div>
         </a>
       
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-network-wired text-blue-500 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Flebología</h2>
           </div>
         </a>
       
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-user-md text-green-500 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Dermatología</h2>
           </div>
         </a>
       
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-child text-yellow-500 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Pediatría</h2>
           </div>
         </a>
       
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-balance-scale text-gray-500 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Endocrinología</h2>
           </div>
         </a>
       
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-brain text-indigo-500 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Neurología</h2>
           </div>
         </a>
       
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-head-side-virus text-red-400 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Psiquiatría</h2>
           </div>
         </a>
       
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-eye text-blue-600 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Oftalmología</h2>
           </div>
         </a>
       
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-assistive-listening-systems text-orange-500 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Otorrinolaringología</h2>
           </div>
         </a>
       
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-dna text-pink-400 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Reumatología</h2>
           </div>
         </a>
       
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-stethoscope text-blue-500 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Gastroenterología</h2>
           </div>
         </a>
       
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-procedures text-purple-600 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Urología</h2>
           </div>
         </a>
       
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-vials text-green-500 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Nefrología</h2>
           </div>
         </a>
       
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-tint text-red-600 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Hematología</h2>
           </div>
         </a>
       
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-ribbon text-red-500 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Oncología</h2>
           </div>
         </a>
       
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-lungs text-teal-500 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Neumonología</h2>
           </div>
         </a>
       
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-allergies text-yellow-600 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Alergología</h2>
           </div>
         </a>
       
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-clinic-medical text-blue-700 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Medicina General</h2>
           </div>
         </a>
 
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-user-md text-gray-500 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Medicina Interna</h2>
           </div>
         </a>
 
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-scalpel text-blue-500 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Cirugía General</h2>
           </div>
         </a>
 
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-walking text-green-500 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Ortopedia</h2>
           </div>
         </a>
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-users text-orange-500 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Medicina Familiar</h2>
           </div>
         </a>
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-apple-alt text-red-400 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Nutrición</h2>
           </div>
         </a>
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-child text-purple-600 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Psiquiatría Infantil</h2>
           </div>
         </a>
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-user-edit text-pink-500 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Cirugía Plástica</h2>
           </div>
         </a>
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-tooth text-blue-400 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Odontología</h2>
           </div>
         </a>
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-dumbbell text-teal-500 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Fisiatría</h2>
           </div>
         </a>
-        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2()">
+        <a class="areas block p-4" href="javascript:void(0)" onclick="goStep2(event)">
           <div class="especialidad text-center">
             <i class="fas fa-blind text-gray-600 text-4xl mr-2"></i>
             <h2 class="text-lg font-semibold">Geriatría</h2>
           </div>
         </a>
-      </div>      
+      </div>    
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <div id="fp"></div>
   <div id="footer-placeholder"></div>
 
   <script src="js/components.js"></script>
