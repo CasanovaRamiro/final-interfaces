@@ -304,7 +304,7 @@ function goStep4(event){
         button1.className = "bg-green-500 text-white py-2 px-4 m-2 rounded";
         button1.addEventListener('click', () =>{
           console.log("turno confirmado.");
-          alert("Confirmación realizada exitosamente");
+          
           setTimeout(() => {
             window.location.href = "../final-interfaces/home.html";
         }, 2000);// Cambia a tu URL
@@ -313,7 +313,8 @@ function goStep4(event){
         button2.textContent = "Cancelar";
         button2.className = "bg-red-500 text-white py-2 px-4 m-2 rounded";
         button2.onclick = function () {
-          window.location.href = "../final-interfaces/home.html"; // Cambia a tu URL
+          alert("Cancelación exitosa");
+          window.location.href = "../final-interfaces/turnos.html"; // Cambia a tu URL
         };
       buttonsDiv.append(button1);
       buttonsDiv.append(button2);
