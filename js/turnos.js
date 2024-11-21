@@ -1,12 +1,24 @@
 const step = document.getElementById('step-container');
 const sedes = ['Sede Caballito', 'Hospital Central', 'Anexo Microcentro', 'Htal Escuela North Zone', 'Htal Gral South Zone', 'Htal Gral Far West Zone']
+// Fechas habilitadas
+const fechasDisponibles = ["2024-11-25", "2024-11-27", "2024-12-01"];
+
+
 const medicosCardiologia = [
   'Torres, María Micaela', 
   'Gimenez, Horacio Anibal', 
   'Uschauk, Gimena', 
   'Wittgenstein, Emilio'
 ];
-
+const medicosObstetricia = [
+  'Becerra, María Emilia',
+  'Milei, Javier Gerardo',
+  'Sorín, Juan Pablo',
+  'Mazza, Valeria',
+  'Ardohain, Carolina',
+  'Espósito, Lali',
+  'Bullrich, Patricia'
+];
 const medicosPediatria = [
   'Fernandez, Lucia Valentina', 
   'Gomez, Santiago Andres', 
@@ -92,18 +104,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-step.addEventListener("click", (event) => {
-  var especialidad = event.target.childNodes[0].data;
-  localStorage.setItem("especialidad", especialidad);
-});
-
 function goStep1(){
-    var step1 = document.createElement('div');
-    step1.innerHTML = ``;
-    step.appendChild(step1);
+  var step1 = document.createElement('div');
+  step1.innerHTML = ``;
+  step.appendChild(step1);
 }
 
-  function goStep2(){
+function goStep2(event) {
+  var h2Data = event.target.getElementsByTagName("h2");
+  let epr = event.target.textContent;
+  let especialidadParaRegistrar = "";
+  if(h2Data.length != 0)
+    {
+      especialidadParaRegistrar = h2Data[0].textContent;
+      localStorage.setItem("especialidad", especialidadParaRegistrar);
+    }
+  else if(event.target.childNodes[0].textContent != null || event.target.childNodes[0].textContent != 'undefined')
+   {
+     especialidadParaRegistrar = event.target.childNodes[0].textContent;
+     localStorage.setItem("especialidad", especialidadParaRegistrar);
+   }
+   else localStorage.setItem("especialidad", epr)
+
     const step = document.getElementById('step-container');
     const step2Circle = document.getElementById('step-2');
     
@@ -211,7 +233,7 @@ function goStep1(){
 
     for(let sede of sedes){
       step2.innerHTML += 
-      `<a class="areas block p-4" href="javascript:void(0)" onclick="goStep3()">
+      `<a class="areas block p-4" href="javascript:void(0)" onclick="goStep3(event)">
         <div class="especialidad text-center">
           <i class="fas fa-building text-black-500 text-4xl mr-2"></i>
           <h2 class="text-lg font-semibold">`+`${sede}`+`</h2>
@@ -222,7 +244,38 @@ function goStep1(){
     step.appendChild(step2);
   }
 
-function goStep3(){
+function goStep4(event){
+  const fechaReserva = event.target.children[2].value;
+  if(fechaReserva != null || fechaReserva != 'undefined')
+    {
+      localStorage.setItem('fechaReserva', fechaReserva);
+    }
+    //removemos todos los valores previos...
+    let containerChildren = Array.from(step.children);
+    containerChildren.forEach(child => child.remove());
+
+    //actualizamos colores de bolas para el paso 4
+    const step4Circle = document.getElementById('step-4');
+      step4Circle.style.backgroundColor = '#003366';
+      step4Circle.style.color = 'white';
+      let step3Circle = document.getElementById('step-3');
+      step3Circle.style.backgroundColor = 'gray';
+
+    let profesionales = document.getElementById('prof');
+      profesionales.classList.replace("text-blue-900", "text-gray-600");
+    let confirmacion = document.getElementById('conf');
+    confirmacion.classList.replace('text-gray-600', 'text-blue-900');
+}
+
+function goStep3(event){
+  var h2Data = event.target.getElementsByTagName("h2");
+  if(h2Data.length != 0)
+    {
+      var sedeParaRegistrar = h2Data[0].textContent;
+      localStorage.setItem("sede", sedeParaRegistrar);
+    }
+  else{localStorage.setItem("sede", event.target.childNodes[0].textContent)}
+
   let especialidadElegida = localStorage.getItem("especialidad");
   const step = document.getElementById('step-container');
     const step3Circle = document.getElementById('step-3');
@@ -249,50 +302,98 @@ function goStep3(){
       case 'Cardiología':
         medicosSegunEsp = medicosCardiologia;
         break;
-        case 'Traumatología':
-          medicosSegunEsp = medicosTraumatologia;
-          break;
-        case 'Dermatología':
+      case 'Traumatología':
+        medicosSegunEsp = medicosTraumatologia;
+        break;
+      case 'Obstetricia':
+        medicosSegunEsp = medicosObstetricia;
+        break;
+      case 'Dermatología':
         medicosSegunEsp = medicosDermatologia;
-          break;
-        case 'Flebología':
-          medicosSegunEsp = medicosFlebologia;
-          break;
-        case 'Ginecología':
+        break;
+      case 'Flebología':
+        medicosSegunEsp = medicosFlebologia;
+        break;
+      case 'Ginecología':
         medicosSegunEsp = medicosGinecologia;
           break;
-        case 'Neurología':
+      case 'Neurología':
         medicosSegunEsp = medicosNeurologia;
           break;
-        case 'Oftalmología':
+      case 'Oftalmología':
         medicosSegunEsp = medicosOftalmologia;
           break;
-        case 'Oncología':
+      case 'Oncología':
         medicosSegunEsp = medicosOncologia;
           break;
-        case 'Pediatría':
+      case 'Pediatría':
         medicosSegunEsp = medicosPediatria;
           break;
-        case 'Psiquiatría':
+      case 'Psiquiatría':
         medicosSegunEsp = medicosPsiquiatria;
           break;
       default:
         break;
     }
 
+    
     for(let medico of medicosSegunEsp){
-      step3.innerHTML += 
-      `<a class="areas block p-4" href="javascript:void(0)" onclick="goStep4()">
-        <div class="especialidad text-center">
-          <i class="fas fa-user-md text-black-500 text-4xl mr-2"></i>
-          <h2 class="text-lg font-semibold">`+`${medico}`+`</h2>
-        </div>
-      </a>`;
+      // Crear el enlace <a>
+    const enlace = document.createElement("a");
+      enlace.className = "areas block p-4";
+      enlace.href = "javascript:void(0)";
+      enlace.onclick = goStep4; // Pasar la referencia de la función
+      
+    // Crear el div de la especialidad
+    const divMedico = document.createElement("div");
+      divMedico.className = "especialidad text-center";
+      
+    // Crear el ícono
+    const icono = document.createElement("i");
+      icono.className = "fas fa-user-md text-black-500 text-4xl mr-2";
+      
+    // Crear el título <h2>
+    const titulo = document.createElement("h2");
+      titulo.className = "flex text-lg font-semibold";
+      titulo.textContent = medico;
+      
+    // Crear el input único para este médico
+    const nuevoInput = document.createElement("input");
+      nuevoInput.type = "text";
+      nuevoInput.placeholder = "selecciona una fecha";
+      nuevoInput.className = "flex mb-1 ml-4";
+
+      // Ensamblar los elementos
+    divMedico.appendChild(icono);
+    divMedico.appendChild(titulo);
+    divMedico.appendChild(nuevoInput); // Agregar el input
+    enlace.appendChild(divMedico);
+
+    flatpickr(nuevoInput, {
+      enableTime: true,
+      dateFormat: "Y-m-d H:i",
+      minTime: "09:00",
+      maxTime: "21:30", // Formato de la fecha
+      enable: ["2024-11-25", "2024-11-27"], // Fechas habilitadas
+    });
+    step3.appendChild(enlace);
     }
+    
+    // for(let child of step3.children){
+    //   let divMedico = child.children[0];
+    //   divMedico.appendChild(nuevoInput);
+    // }
     step.appendChild(step3);
+
+    let flatpickerdiv = document.getElementById("fp");
+
+    
+
+    flatpickerdiv.appendChild(nuevoInput);
+
+    
+
 }
 
-function goStep4(){
 
-}
   
