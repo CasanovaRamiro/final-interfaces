@@ -265,6 +265,59 @@ function goStep4(event){
       profesionales.classList.replace("text-blue-900", "text-gray-600");
     let confirmacion = document.getElementById('conf');
     confirmacion.classList.replace('text-gray-600', 'text-blue-900');
+
+    let divFondo = document.createElement('div');
+      divFondo.className = "space-y-4";
+      divFondo.classList.add('confirmacion');
+    // let divLinea = document.createElement('hr');
+      // divLinea.classList.add('divLinea');
+      // divFondo.appendChild(divLinea);
+      let titulo = document.createElement('h1');
+      titulo.textContent = "Por favor lea atentamente y confirme su cita";
+      titulo.classList.add('text-black-600');
+      titulo.classList.add('text-center');
+      titulo.classList.add('text-2xl');
+      titulo.classList.add('font-bold');
+      let especialidad = document.createElement('h1');
+        especialidad.className = "text-xl ml-4";
+        especialidad.textContent = `Especialidad: ${localStorage.getItem('especialidad')}`;
+      let sede = document.createElement('h1');
+        sede.className = "text-xl ml-4";
+        sede.textContent = `Sede : ${localStorage.getItem('sede')}`;
+      let profesional = document.createElement('h1');
+      profesional.className = "text-xl ml-4";
+        profesional.textContent = `Profesional : ${event.target.children[1].textContent}`;
+      let fechaReser = document.createElement('h1');
+        fechaReser.className = "text-xl ml-4";
+        fechaReser.textContent = `Fecha de cita médica : ${event.target.children[2].value}`;
+
+        //agregamos los botones
+      let buttonsDiv = document.createElement('div');
+        buttonsDiv.className = "flex justify-center items-center h-64 space-x-4";
+      let button1 = document.createElement('button');
+        button1.textContent = "Confirmar";
+        button1.className = "bg-green-500 text-white py-2 px-4 m-2 rounded";
+        button1.addEventListener('click', function() {
+          alert("Confirmación realizada exitosamente");
+          console.log("turno confirmado.");
+          window.location.href = "../final-interfaces/home.html"; // Cambia a tu URL
+        });
+        let button2 = document.createElement('button');
+        button2.textContent = "Cancelar";
+        button2.className = "bg-red-500 text-white py-2 px-4 m-2 rounded";
+        button2.onclick = function () {
+          window.location.href = "../final-interfaces/home.html"; // Cambia a tu URL
+        };
+      buttonsDiv.append(button1);
+      buttonsDiv.append(button2);
+      divFondo.append(titulo);
+      divFondo.append(especialidad);
+      divFondo.append(sede);
+      divFondo.append(profesional);
+      divFondo.append(fechaReser);
+      divFondo.append(buttonsDiv);
+      step.appendChild(divFondo);
+
 }
 
 function goStep3(event){
@@ -370,6 +423,8 @@ function goStep3(event){
     enlace.appendChild(divMedico);
 
     flatpickr(nuevoInput, {
+      altInput: true,
+      altFormat: "F j, Y",
       enableTime: true,
       dateFormat: "Y-m-d H:i",
       minTime: "09:00",
