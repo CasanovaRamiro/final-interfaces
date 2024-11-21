@@ -169,7 +169,7 @@ class Components {
                 <div class="call-screen">
                     <div class="video-area">
                         <div class="placeholder-video">
-                            <img src="./img/doctor.jpg" alt="User camera placeholder" class="user-camera-img">
+                            <img src="./img/medico-llamada.jpg" alt="User camera placeholder" class="user-camera-img">
                         </div>
                     </div>
                     <div class="video-controls">
