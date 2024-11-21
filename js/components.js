@@ -299,7 +299,7 @@ class Components {
 
             messageDiv.innerHTML = messageIndex % 2 === 0 ? `
                 <span class="msg-avatar">
-                    <img src="./img/medico-llamada.jpg" alt="User camera placeholder">
+                    <img src="./img/medico 7.jfif" alt="User camera placeholder">
                 </span>
                 <div class="msg-text">
                     ${msg}
