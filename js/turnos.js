@@ -284,7 +284,7 @@ function goStep4(event){
       titulo.classList.add('text-2xl');
       titulo.classList.add('font-bold');
       let especialidad = document.createElement('h1');
-        especialidad.className = "text-xl ml-4";
+        especialidad.className = "text-xl ml-4 ";
         especialidad.textContent = `Especialidad: ${localStorage.getItem('especialidad')}`;
       let sede = document.createElement('h1');
         sede.className = "text-xl ml-4";
@@ -298,10 +298,10 @@ function goStep4(event){
 
         //agregamos los botones
       let buttonsDiv = document.createElement('div');
-        buttonsDiv.className = "flex justify-center items-center h-64 space-x-4";
+        buttonsDiv.className = "flex justify-center items-center space-x-4";
       let button1 = document.createElement('button');
         button1.textContent = "Confirmar";
-        button1.className = "bg-green-500 text-white py-2 px-4 m-2 rounded";
+        button1.className = "btn-confirm";
         button1.addEventListener('click', () =>{
           console.log("turno confirmado.");
           
@@ -311,7 +311,7 @@ function goStep4(event){
         });
         let button2 = document.createElement('button');
         button2.textContent = "Cancelar";
-        button2.className = "bg-red-500 text-white py-2 px-4 m-2 rounded";
+        button2.className = "btn-cancel";
         button2.onclick = function () {
           alert("Cancelación exitosa");
           window.location.href = "../final-interfaces/turnos.html"; // Cambia a tu URL

@@ -40,6 +40,7 @@
 .confirmacion{
   width: 100%;
   height: 100%;
+  padding: 2rem;
   background-color: rgb(135, 206, 235, 50%);
   border-left: thick double #003366;
 }
@@ -66,3 +67,27 @@
 .chevron:hover{
   color: #66cc99;
 }
+
+.btn-confirm{
+  text-decoration: none;
+  padding: 1rem;
+  margin: 1rem;
+  background: #003366;
+  color: white;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-cancel{
+  color: #003366;
+  text-decoration: none;
+}
+
+.btn-cancel:hover{
+  text-decoration: underline;
+}
+.btn-confirm:hover{
+  background-color: #66cc99;
+  color: #000;
+  }

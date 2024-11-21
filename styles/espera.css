@@ -49,6 +49,10 @@ color: #003366;
     cursor: pointer;
     transition: all 0.3s ease;
 }
+.btn-teleconsulta:hover{
+background-color: #66cc99;
+color: #000;
+}
 
 .a-btn{
     color: #ffffff;
